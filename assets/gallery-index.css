@@ -41,3 +41,13 @@
 @media(hover:hover) and (pointer:fine){#salonika-site.gallery-index-page .gallery-card:hover{border-color:var(--card-accent);box-shadow:0 12px 28px #163a4d14}#salonika-site.gallery-index-page .gallery-card:hover .gallery-arrow{background:var(--card-ink);border-color:var(--card-ink);color:var(--card-bg)}}
 
 #salonika-site.gallery-index-page .about-content .gallery-card-description{color:var(--card-body);font-size:16px;line-height:1.6}
+
+/* Topic links read as inviting, touch-friendly entry buttons. */
+#salonika-site.gallery-index-page .gallery-topics{gap:12px;padding-block:14px 32px;align-items:stretch}
+#salonika-site.gallery-index-page .gallery-topics a{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:10px 17px 10px 11px;background:#e0eef1;color:var(--navy);border:1px solid #aac8d2;border-radius:8px;font-size:16px;font-weight:600;line-height:1.4;box-shadow:0 3px 0 #1f4f6610;transition:background 180ms ease,border-color 180ms ease,color 180ms ease,box-shadow 180ms ease}
+#salonika-site.gallery-index-page .topic-entry-arrow{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:white;font-size:18px;line-height:1;transition:transform 180ms var(--ease),background 180ms ease,color 180ms ease}
+#salonika-site.gallery-index-page .gallery-topics a:focus-visible{outline:3px solid var(--teal);outline-offset:4px;background:var(--navy);color:white}
+@media(hover:hover) and (pointer:fine){#salonika-site.gallery-index-page .gallery-topics a:hover{background:var(--navy);border-color:var(--navy);color:white;box-shadow:0 4px 12px #1f4f6620}#salonika-site.gallery-index-page .gallery-topics a:hover .topic-entry-arrow{background:var(--mist);color:var(--navy);transform:translateX(-2px)}}
+#salonika-site.gallery-index-page .gallery-topics a:active{background:#c0e4e0;color:var(--navy);box-shadow:none}
+@media(width <= 600px){#salonika-site.gallery-index-page .gallery-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-block:8px 26px}#salonika-site.gallery-index-page .gallery-topics a{min-height:58px;padding:10px 12px;gap:8px;font-size:14px}#salonika-site.gallery-index-page .topic-entry-arrow{flex-basis:24px;width:24px;height:24px;font-size:16px}}
+@media(prefers-reduced-motion:reduce){#salonika-site.gallery-index-page .gallery-topics a,#salonika-site.gallery-index-page .topic-entry-arrow{transition:none;transform:none!important}}
