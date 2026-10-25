@@ -61,3 +61,13 @@
 #salonika-site.galleries-page .album-slider-hint{font-size:13px;color:#718790;margin:8px 0 0}
 #salonika-site.galleries-page .album-slider button:focus-visible{outline:3px solid #408aa4;outline-offset:-4px}
 @media(width <= 600px){#salonika-site.galleries-page .album-stage{height:clamp(270px,80vw,410px);border-radius:5px}#salonika-site.galleries-page .album-image-open{padding:10px 8px 56px}#salonika-site.galleries-page .album-prev,#salonika-site.galleries-page .album-next{width:38px;height:38px;top:auto;bottom:10px;transform:none;font-size:21px}#salonika-site.galleries-page .album-prev{right:calc(50% - 44px)}#salonika-site.galleries-page .album-next{left:calc(50% - 44px)}#salonika-site.galleries-page .album-expand{bottom:12px;left:12px}#salonika-site.galleries-page .gallery-thumb{flex-basis:78px}#salonika-site.galleries-page .album-thumbnails{gap:7px}#salonika-site.galleries-page .album-slide-info{padding-block:14px 10px;gap:12px}#salonika-site.galleries-page .album-slide-caption{font-size:14px}#salonika-site.galleries-page .album-slider-hint{font-size:12px;line-height:1.6}}
+
+/* Stable filmstrip: images move together instead of swapping their source. */
+#salonika-site.galleries-page .album-reel-window{display:block;width:100%;height:100%;overflow:hidden;border-radius:3px}
+#salonika-site.galleries-page .album-reel{display:flex;direction:ltr;width:100%;height:100%;transition:transform 280ms var(--ease);will-change:transform}
+#salonika-site.galleries-page .album-reel .album-main-image{flex:0 0 100%;min-width:100%;height:100%;object-fit:contain;pointer-events:none}
+#salonika-site.galleries-page .album-stage .album-slide-count{position:absolute;bottom:22px;right:22px;padding:3px 10px;border-radius:20px;background:#ffffffdd;color:#355d6d;font-size:12px;letter-spacing:.04em}
+#salonika-site.galleries-page .album-thumbnails{margin-top:18px}
+#salonika-site.galleries-page .album-prev:disabled,#salonika-site.galleries-page .album-next:disabled,.viewer-prev:disabled,.viewer-next:disabled{opacity:.3;cursor:default}
+@media(width <= 600px){#salonika-site.galleries-page .album-stage .album-slide-count{right:12px;bottom:16px}#salonika-site.galleries-page .album-thumbnails{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){#salonika-site.galleries-page .album-reel{transition:none}}
