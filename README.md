@@ -16,13 +16,18 @@ python3 -m http.server 8000 --directory dist
 ## מבנה הפרויקט
 
 - `dist/` — האתר הסטטי: HTML, CSS, JavaScript, תמונות וסרטונים.
-- `dist/about/`, `dist/team/`, `dist/founder/`, `dist/collections/` — העמודים הפנימיים.
+- `dist/about/`, `dist/team/`, `dist/founder/`, `dist/collections/`, `dist/galleries/` — העמודים הפנימיים.
+- `dist/galleries/` — עמוד ראשי ותשע גלריות, עם 176 תמונות שהועברו מהאתר המקורי.
 - `docs/` — הערות עיצוב ומקורות.
 - `.openai/hosting.json` — הגדרות האירוח המקוריות ב־Sites.
 
-בעת העלאה לאירוח סטטי יש להגדיר את `מרכז מורשת/dist` כתיקיית הפרסום, כדי שהנתיבים המוחלטים באתר יעבדו.
+קוד המקור נשמר בענף `main`. הפרסום מתבצע רק ב־GitHub Pages, דרך ענף `gh-pages` ותיקיית השורש שלו. ענף הפרסום מכיל את תוכן `מרכז מורשת/dist`, עם קידומת `/moreshet/` לנתיבי העמודים והנכסים ועם קובץ `.nojekyll`.
 
-כתובת האתר הקיים: https://salonika-heritage-sofi.editlevin73.chatgpt.site
+כתובת האתר: https://editadzine-ux.github.io/moreshet/
+
+עמוד הגלריות: https://editadzine-ux.github.io/moreshet/galleries/
+
+מיפוי הגלריות וכתובות התמונות המקוריות נשמר ב־`מרכז מורשת/docs/gallery-migration-20261025.json`.
 
 זהו עותק של פרויקט האתר המעוצב, ולא ארכיון הגיבוי של האתר הישן. חלק מהתוכן מוטמע משירותים חיצוניים; טופס יצירת הקשר נמצא במצב תצוגה מקדימה ואינו שולח פניות.
 
