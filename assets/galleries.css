@@ -41,3 +41,23 @@
 @media(prefers-reduced-motion:reduce){#salonika-site.galleries-page *{transition:none!important}}
 
 .viewer-counter{direction:ltr;unicode-bidi:isolate}
+/* One photograph at a time, with a quiet, tactile contact sheet underneath. */
+#salonika-site.galleries-page .album-slider{padding-bottom:40px}
+#salonika-site.galleries-page .album-stage{position:relative;background:#e8eff0;border:1px solid #d2dfe3;border-radius:8px;overflow:hidden;height:clamp(320px,48vw,610px)}
+#salonika-site.galleries-page .album-image-open{display:block;width:100%;height:100%;border:0;padding:18px 76px;background:transparent;cursor:zoom-in}
+#salonika-site.galleries-page .album-main-image{display:block;width:100%;height:100%;object-fit:contain;border-radius:3px}
+#salonika-site.galleries-page .album-prev,#salonika-site.galleries-page .album-next{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border:1px solid #b8cdd5;border-radius:50%;background:#ffffffed;color:#234f68;display:grid;place-items:center;font-size:24px;line-height:1;box-shadow:0 4px 16px #173d4e0d;transition:background .18s,border-color .18s}
+#salonika-site.galleries-page .album-prev{right:17px}#salonika-site.galleries-page .album-next{left:17px}
+#salonika-site.galleries-page .album-prev:hover,#salonika-site.galleries-page .album-next:hover{background:#dcebf0;border-color:#608a9b}
+#salonika-site.galleries-page .album-expand{position:absolute;bottom:16px;left:18px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:#fffD;color:#245269;font-size:21px}
+#salonika-site.galleries-page .album-slide-info{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 2px 16px;color:#355d6d}
+#salonika-site.galleries-page .album-slide-caption{margin:0;font-size:16px}
+#salonika-site.galleries-page .album-slide-count{font-size:14px;letter-spacing:.06em;font-variant-numeric:tabular-nums;white-space:nowrap}
+#salonika-site.galleries-page .album-thumbnails{display:flex;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#a7c3ce transparent;padding:4px 3px 13px;scroll-snap-type:x proximity}
+#salonika-site.galleries-page .gallery-thumb{position:relative;display:block;flex:0 0 106px;aspect-ratio:4/3;background:#e5edef;border:2px solid transparent;border-radius:5px;padding:3px;scroll-snap-align:start;opacity:.62;transition:opacity .2s,border-color .2s}
+#salonika-site.galleries-page .gallery-thumb img{display:block;width:100%;height:100%;object-fit:contain;border-radius:2px}
+#salonika-site.galleries-page .gallery-thumb:hover{opacity:1}
+#salonika-site.galleries-page .gallery-thumb[aria-current=true]{opacity:1;border-color:#285e76;background:#fff;box-shadow:0 2px 8px #244e6912}
+#salonika-site.galleries-page .album-slider-hint{font-size:13px;color:#718790;margin:8px 0 0}
+#salonika-site.galleries-page .album-slider button:focus-visible{outline:3px solid #408aa4;outline-offset:-4px}
+@media(width <= 600px){#salonika-site.galleries-page .album-stage{height:clamp(270px,80vw,410px);border-radius:5px}#salonika-site.galleries-page .album-image-open{padding:10px 8px 56px}#salonika-site.galleries-page .album-prev,#salonika-site.galleries-page .album-next{width:38px;height:38px;top:auto;bottom:10px;transform:none;font-size:21px}#salonika-site.galleries-page .album-prev{right:calc(50% - 44px)}#salonika-site.galleries-page .album-next{left:calc(50% - 44px)}#salonika-site.galleries-page .album-expand{bottom:12px;left:12px}#salonika-site.galleries-page .gallery-thumb{flex-basis:78px}#salonika-site.galleries-page .album-thumbnails{gap:7px}#salonika-site.galleries-page .album-slide-info{padding-block:14px 10px;gap:12px}#salonika-site.galleries-page .album-slide-caption{font-size:14px}#salonika-site.galleries-page .album-slider-hint{font-size:12px;line-height:1.6}}
