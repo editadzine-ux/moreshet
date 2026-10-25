@@ -1,0 +1,37 @@
+#salonika-site.founder-page .founder-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+  padding-block: clamp(32px, 4vw, 56px);
+}
+#salonika-site.founder-page .founder-opening > * { min-width: 0; }
+#salonika-site.founder-page .founder-opening .founder-intro,
+#salonika-site.founder-page .founder-opening .founder-film { padding: 0; }
+#salonika-site.founder-page .founder-intro-copy { display: block; }
+#salonika-site.founder-page .founder-intro-copy > p + p { margin-top: 18px; font-size: var(--type-body); line-height: 1.75; }
+#salonika-site.founder-page .founder-intro-copy .about-intro-action { margin-top: 22px; }
+#salonika-site.founder-page .founder-film-mat { padding: 8px; }
+#salonika-site.founder-page .founder-film-caption { align-items: start; gap: 16px; padding-top: 16px; }
+#salonika-site.founder-page .founder-credit { flex-direction: column; gap: 4px; }
+#salonika-site.founder-page .founder-mission-art { display: block; width: min(100%, 460px); height: auto; object-fit: contain; margin-top: 24px; }
+#salonika-site.founder-page .founder-mission-layout { align-items: center; }
+@media (width <= 850px) {
+  #salonika-site.founder-page .founder-opening { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  #salonika-site.founder-page .founder-opening .founder-film { width: 100%; max-width: 600px; justify-self: center; }
+  #salonika-site.founder-page .founder-mission-art { width: min(100%, 420px); margin-inline: auto; }
+}
+
+/* Mission: one editorial column beside a larger, uncropped illustration. */
+#salonika-site.founder-page .founder-mission { padding-block: clamp(36px, 4vw, 56px); }
+#salonika-site.founder-page .founder-mission-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: clamp(28px, 4vw, 60px); align-items: center; }
+#salonika-site.founder-page .founder-mission-copy { padding-top: 20px; }
+#salonika-site.founder-page .founder-mission-copy p { margin: 0; }
+#salonika-site.founder-page .founder-mission-copy p + p { margin-top: 16px; }
+#salonika-site.founder-page .founder-mission-art { width: 100%; max-width: 680px; height: auto; margin: 0; justify-self: center; }
+#salonika-site.founder-page .founder-date { margin-top: 24px; padding-top: 18px; }
+#salonika-site.founder-page .founder-date b { font-size: 32px; }
+@media (width <= 760px) {
+  #salonika-site.founder-page .founder-mission-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  #salonika-site.founder-page .founder-mission-art { max-width: 520px; }
+}

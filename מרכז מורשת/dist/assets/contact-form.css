@@ -1,0 +1,35 @@
+/* Compact contact for editorial pages, using the homepage's palette and field treatment. */
+#salonika-site.about-page .about-visit.contact-compact { padding-block: clamp(48px, 5vw, 72px); background: var(--paper); border-top: 1px solid var(--line); }
+#salonika-site.about-page .contact-compact .about-visit-layout { align-items: start; }
+#salonika-site.about-page .contact-compact-intro > p:not(.kick) { max-width: 38ch; }
+#salonika-site .contact-compact-details { display: flex; flex-direction: column; align-items: start; gap: 10px; margin-top: 28px; color: var(--muted); font: 400 var(--type-detail)/1.6 var(--font); }
+#salonika-site .contact-compact-details a { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; min-height: 32px; }
+#salonika-site .contact-compact-details a bdi { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+#salonika-site .contact-compact-details a:hover bdi { color: var(--teal-2); }
+#salonika-site .contact-compact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 24px; padding: 0; margin: 0; }
+#salonika-site .contact-compact-form label { display: flex; flex-direction: column; min-width: 0; gap: 4px; color: var(--ink); font: 400 var(--type-label)/1.6 var(--font); }
+#salonika-site .contact-compact-form label small { color: var(--muted); font: inherit; }
+#salonika-site .contact-full { grid-column: 1 / -1; }
+#salonika-site .contact-compact-form input,
+#salonika-site .contact-compact-form textarea { display: block; width: 100%; min-width: 0; min-height: 48px; padding: 12px 2px; border: 0; border-bottom: 1px solid var(--muted); border-radius: 0; background: transparent; color: var(--ink); font: 400 max(16px, var(--type-detail))/1.5 var(--font); box-shadow: none; }
+#salonika-site .contact-compact-form input::placeholder,
+#salonika-site .contact-compact-form textarea::placeholder { color: var(--muted); opacity: 1; }
+#salonika-site .contact-compact-form textarea { resize: vertical; min-height: 90px; }
+#salonika-site .contact-compact-form input:focus,
+#salonika-site .contact-compact-form textarea:focus { border-bottom-color: var(--teal-2); outline: 2px solid var(--teal-2); outline-offset: 4px; }
+#salonika-site .contact-submit-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; }
+#salonika-site .contact-required { color: var(--muted); font-size: var(--type-label); }
+#salonika-site .contact-submit { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-height: 48px; min-width: 160px; padding: 12px 24px; border: 0; border-radius: 2px; color: #fff; background: var(--copper); font: 600 var(--type-detail)/1.4 var(--font); }
+#salonika-site [data-contact-preview] button:disabled { color: #fff; background: var(--muted); cursor: not-allowed; }
+#salonika-site .contact-preview-note,
+#salonika-site.about-page .about-content .contact-preview-note { margin: 0; max-width: none; color: var(--muted); font: 400 var(--type-label)/1.65 var(--font) !important; }
+#salonika-site .contact-preview-note a { display: inline; margin-inline-start: 4px; color: var(--teal-2); text-decoration: underline; text-underline-offset: 3px; }
+#salonika-site .contact-preview-note a:focus-visible { outline: 2px solid var(--teal-2); outline-offset: 4px; }
+@media (width <= 560px) {
+  #salonika-site .contact-compact-form { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  #salonika-site .contact-compact-details { margin-top: 20px; }
+}
+@media (forced-colors: active) {
+  #salonika-site .contact-compact-form :is(input, textarea) { border: 1px solid CanvasText; }
+  #salonika-site [data-contact-preview] button:disabled { color: GrayText; border: 1px solid GrayText; }
+}

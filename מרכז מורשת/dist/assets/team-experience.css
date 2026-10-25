@@ -1,0 +1,239 @@
+/* Illustrated editorial sections, scoped to the leadership page. */
+#salonika-site.team-page { --team-illustration-width: clamp(220px, 32vw, 480px); }
+#salonika-site.team-page .team-intro { padding-bottom: 56px; }
+#salonika-site.team-page .team-intro .team-index { gap: 0 24px; }
+#salonika-site.team-page .team-intro .team-index a {
+  justify-content: start;
+  gap: 12px;
+  min-height: 60px;
+  text-decoration: none;
+}
+#salonika-site.team-page .team-index .team-index-number {
+  flex: 0 0 26px;
+  color: var(--teal-2);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+#salonika-site.team-page .team-index .team-index-label { color: inherit; }
+#salonika-site.team-page .team-index .team-index-arrow { margin-inline-start: auto; }
+#salonika-site.team-page .team-index a[aria-current="location"] { color: var(--teal-2); font-weight: 600; border-bottom-color: var(--teal-2); }
+#salonika-site.team-page .team-section-heading { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+#salonika-site.team-page .team-section-caption { font-size: var(--type-label); }
+
+/* The two senior leaders sit together, centered above the wider board. */
+#salonika-site.team-page .team-leadership-panel {
+  position: relative;
+  isolation: isolate;
+  padding: 32px 48px 48px;
+  border-top: 3px solid var(--navy);
+  background: #eaf2f3;
+}
+#salonika-site.team-page .team-leadership-panel > :not(.team-scene) { position: relative; z-index: 1; }
+#salonika-site.team-page .team-content .team-leadership-label {
+  text-align: center;
+  border-bottom-color: #c8dadd;
+  margin-bottom: 36px;
+}
+#salonika-site.team-page .team-leadership { max-width: 940px; margin-inline: auto; gap: 0; }
+#salonika-site.team-page .team-leadership .team-person {
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding-inline: 32px;
+  text-align: center;
+}
+#salonika-site.team-page .team-leadership .team-person + .team-person { padding-inline-start: 32px; border-inline-start-color: #c8dadd; }
+#salonika-site.team-page .team-leadership .team-portrait {
+  flex-basis: auto;
+  width: 120px;
+  height: 140px;
+  border-radius: 64px 64px 2px 2px;
+  background: #f9fcfc;
+  border-color: #abc8cf;
+}
+#salonika-site.team-page .team-leadership .team-person-copy { gap: 10px; }
+#salonika-site.team-page .team-leadership .team-person .team-role { font-size: var(--type-label) !important; }
+#salonika-site.team-page .team-leadership .team-person h3 { font-size: var(--type-card) !important; }
+#salonika-site.team-page .team-members { column-gap: 32px; }
+#salonika-site.team-page .team-members .team-person { gap: 20px; }
+#salonika-site.team-page .team-members .team-person h3 { font-size: var(--type-subhead) !important; }
+#salonika-site.team-page .team-members .team-portrait { background: #f4f8f8; color: #62818d; }
+
+/* A book-and-olive engraving gives the management section its own rhythm. */
+#salonika-site.team-page .team-management {
+  position: relative;
+  isolation: isolate;
+  background: #eaf2f3;
+  border-block-color: #cfdee2;
+}
+#salonika-site.team-page .team-management-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--team-illustration-width);
+  gap: 32px 48px;
+  align-items: center;
+}
+#salonika-site.team-page .team-management-copy { min-width: 0; }
+#salonika-site.team-page .team-management-list { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+#salonika-site.team-page .team-management-list .team-person {
+  flex-direction: row;
+  align-items: center;
+  padding: 24px 28px;
+  gap: 24px;
+  background: #f9fcfc;
+  border: 1px solid #cfdee2;
+  border-inline-start: 3px solid var(--teal-2);
+}
+#salonika-site.team-page .team-management-list .team-portrait {
+  flex: 0 0 76px;
+  width: 76px;
+  height: 88px;
+  background: #eef4f4;
+}
+#salonika-site.team-page .team-management-list .team-person h3 { font-size: var(--type-subhead) !important; }
+#salonika-site.team-page .team-audit { padding-block: clamp(48px, 6vw, 80px); }
+#salonika-site.team-page .team-audit .team-members .team-person { padding-block: 12px 24px; }
+
+/* Honorary leadership has a distinct, dignified dark-blue closing panel. */
+#salonika-site.team-page .team-honor {
+  position: relative;
+  isolation: isolate;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  padding: 56px;
+  background: var(--ink);
+  color: #fff;
+  border: 0;
+  border-top: 3px solid #74b8bf;
+}
+#salonika-site.team-page .team-honor > :not(.team-scene) { position: relative; z-index: 1; }
+#salonika-site.team-page .team-honor-heading .kick { color: #c3e1e4; }
+#salonika-site.team-page .team-honor h2 { color: #fff; }
+#salonika-site.team-page .team-honor h2 em { color: #b6e8e5; }
+#salonika-site.team-page .team-honor .team-person { padding-inline-start: 36px; border-inline-start: 1px solid #57737f; }
+#salonika-site.team-page .team-honor .team-portrait { background: #214657; color: #d4e9eb; border-color: #57737f; border-radius: 70px 70px 2px 2px; }
+#salonika-site.team-page .team-honor .team-person .team-role { color: #c3e1e4; }
+#salonika-site.team-page .team-honor .team-person h3 { color: #fff; }
+
+/* Real SVG artwork stays crisp and uncropped. Decorative layers never intercept clicks. */
+#salonika-site.team-page .team-scene { pointer-events: none; }
+#salonika-site.team-page .team-scene img { display: block; width: 100%; height: auto; object-fit: contain; }
+#salonika-site.team-page .team-scene--harbor { position: absolute; z-index: 0; inset: auto 0 0; width: 100%; opacity: .10; }
+#salonika-site.team-page .team-scene--harbor img { max-height: 330px; object-position: center bottom; }
+#salonika-site.team-page .team-scene--books { width: 100%; max-width: 480px; justify-self: center; }
+#salonika-site.team-page .team-scene--olive { position: absolute; z-index: 0; inset-inline-end: 0; inset-block: 0; width: min(54%, 520px); opacity: .16; }
+#salonika-site.team-page .team-scene--olive img { height: 100%; object-position: center bottom; }
+
+/* A tall illustration sits beside the complete leadership group on desktop. */
+@media (width > 760px) {
+  #salonika-site.team-page .team-leadership-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(220px, 26vw, 340px);
+    align-items: center;
+    gap: 20px 36px;
+    padding: 28px 36px;
+  }
+  #salonika-site.team-page .team-leadership-panel .team-scene--harbor {
+    position: static;
+    inset: auto;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    align-self: center;
+    opacity: 1;
+  }
+  #salonika-site.team-page .team-scene--harbor picture { display: block; width: 100%; }
+  #salonika-site.team-page .team-scene--harbor img {
+    height: clamp(280px, 28vw, 360px);
+    max-height: none;
+    aspect-ratio: auto;
+    object-position: center;
+  }
+  #salonika-site.team-page .team-content .team-leadership-label {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: start;
+    font-family: var(--font) !important;
+    font-size: clamp(24px, 2.2vw, 32px) !important;
+    font-weight: 500;
+    line-height: 1.45 !important;
+    letter-spacing: 0;
+  }
+  #salonika-site.team-page .team-leadership-panel .team-leadership {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    padding-top: 24px;
+    border-top: 1px solid #c8dadd;
+  }
+  #salonika-site.team-page .team-leadership-panel .team-person { gap: 14px; padding-inline: 24px; }
+  #salonika-site.team-page .team-leadership-panel .team-person + .team-person { padding-inline-start: 24px; }
+  #salonika-site.team-page .team-leadership-panel .team-portrait { width: 96px; height: 112px; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #salonika-site.team-page .team-index-arrow { transition: transform 160ms var(--ease); }
+  #salonika-site.team-page .team-index a:hover .team-index-arrow { transform: translateY(3px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #salonika-site.team-page.team-motion-ready .team-scene img { opacity: 0; transform: translateY(8px); transition: opacity 600ms var(--ease), transform 600ms var(--ease); }
+  #salonika-site.team-page.team-motion-ready .team-scene.is-visible img { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #salonika-site.team-page .team-index-arrow { transform: none; transition: none; }
+  #salonika-site.team-page .team-index a { transition: color 160ms ease; }
+}
+@media (width <= 1050px) {
+  #salonika-site.team-page .team-management-layout { grid-template-columns: minmax(0, 1fr) var(--team-illustration-width); gap: 32px; }
+  #salonika-site.team-page .team-honor { padding: 40px 32px; gap: 28px; }
+  #salonika-site.team-page .team-honor .team-person { gap: 22px; padding-inline-start: 28px; }
+}
+@media (760px < width <= 1050px) {
+  #salonika-site.team-page .team-leadership-panel { gap: 20px 24px; padding: 28px; }
+  #salonika-site.team-page .team-leadership-panel .team-leadership { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  #salonika-site.team-page .team-leadership-panel .team-person { flex-direction: row; align-items: center; gap: 16px; padding-inline: 0; text-align: start; }
+  #salonika-site.team-page .team-leadership-panel .team-person + .team-person { padding-inline-start: 0; border-inline-start: 0; padding-top: 16px; border-top: 1px solid #c8dadd; }
+  #salonika-site.team-page .team-leadership-panel .team-portrait { flex: 0 0 64px; width: 64px; height: 76px; }
+  #salonika-site.team-page .team-leadership-panel .team-person-copy { gap: 6px; }
+  #salonika-site.team-page .team-leadership-panel .team-person h3 { font-size: var(--type-subhead) !important; }
+}
+@media (width <= 760px) {
+  #salonika-site.team-page .team-intro { padding-bottom: 40px; }
+  #salonika-site.team-page .team-intro .team-index { gap: 0 16px; }
+  #salonika-site.team-page .team-intro .team-index a { gap: 8px; }
+  #salonika-site.team-page .team-index .team-index-number { flex-basis: 20px; }
+  #salonika-site.team-page .team-leadership-panel { padding: 28px; }
+  #salonika-site.team-page .team-leadership { gap: 28px; }
+  #salonika-site.team-page .team-leadership .team-person { padding-inline: 0; }
+  #salonika-site.team-page .team-leadership .team-person + .team-person { padding-inline-start: 0; padding-top: 28px; border-inline-start: 0; border-top: 1px solid #c8dadd; }
+  #salonika-site.team-page .team-management-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  #salonika-site.team-page .team-scene--books { max-width: 340px; }
+  #salonika-site.team-page .team-honor { grid-template-columns: minmax(0, 1fr); padding: 36px 28px; gap: 32px; }
+  #salonika-site.team-page .team-honor .team-person { padding-inline-start: 0; padding-top: 28px; border-inline-start: 0; border-top: 1px solid #57737f; }
+  #salonika-site.team-page .team-scene--olive { width: min(100%, 420px); }
+}
+@media (width <= 560px) {
+  #salonika-site.team-page .team-section-heading { align-items: start; flex-direction: column; gap: 12px; }
+  #salonika-site.team-page .team-leadership-panel { padding-inline: 20px; }
+  #salonika-site.team-page .team-leadership .team-portrait { width: 104px; height: 124px; flex-basis: auto; }
+  #salonika-site.team-page .team-members .team-person { gap: 16px; }
+  #salonika-site.team-page .team-management-list .team-person { padding: 20px 18px; gap: 16px; }
+  #salonika-site.team-page .team-management-list .team-portrait { flex-basis: 60px; width: 60px; height: 72px; }
+  #salonika-site.team-page .team-honor { padding-inline: 24px; }
+  #salonika-site.team-page .team-index .team-index-number { display: none; }
+}
+
+/* Use the site's Hebrew text face for leadership labels and role names. */
+#salonika-site.team-page .team-content .team-leadership-label,
+#salonika-site.team-page .team-leadership .team-person .team-role {
+  font-family: var(--font) !important;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  word-spacing: normal;
+  direction: rtl;
+}

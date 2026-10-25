@@ -1,0 +1,51 @@
+#salonika-site .film-bar[hidden] { display: none !important; }
+#salonika-site .film-bar {
+  position: absolute;
+  inset: auto 0 0;
+  background: linear-gradient(transparent, rgb(0 0 0 / 22%));
+  border: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+#salonika-site .film.controls-visible .film-bar { opacity: 1; pointer-events: auto; }
+#salonika-site .film-bar-in {
+  display: grid;
+  grid-template-columns: auto 44px minmax(60px, 1fr) 80px;
+  direction: ltr;
+  width: calc(100% - 32px);
+  gap: 8px;
+  min-height: 52px;
+  padding-block: 8px;
+}
+#salonika-site .film-transport { display: flex; align-items: center; gap: 0; }
+#salonika-site .film-btn { width: 44px; height: 44px; border: 0; background: transparent; color: #fff; }
+#salonika-site .film-btn svg { width: 17px; height: 17px; filter: drop-shadow(0 1px 2px #0008); }
+#salonika-site .film-skip svg { width: 23px; height: 23px; }
+#salonika-site .film-skip text { font: 600 9px Arial, sans-serif; }
+#salonika-site .film-btn:disabled { opacity: .4; cursor: default; }
+#salonika-site .film-seek { margin: 0; }
+#salonika-site .film-seek input { height: 44px; direction: ltr; touch-action: none; }
+#salonika-site .film-seek input::-webkit-slider-runnable-track { height: 2px; border-radius: 1px; background: linear-gradient(to right, #ffffffe6 var(--p, 0%), #ffffff55 var(--p, 0%)); }
+#salonika-site .film-seek input::-webkit-slider-thumb { width: 8px; height: 8px; margin-top: -3px; background: #fff; box-shadow: none; }
+#salonika-site .film-seek input::-moz-range-track { height: 2px; background: #ffffff55; }
+#salonika-site .film-seek input::-moz-range-progress { height: 2px; background: #ffffffe6; }
+#salonika-site .film-seek input::-moz-range-thumb { width: 8px; height: 8px; background: #fff; }
+#salonika-site .film-time { display: block; min-width: 0; font-size: 12px; text-align: center; color: #ffffffe0; text-shadow: 0 1px 2px #0008; }
+#salonika-site .film-more { display: none; }
+#salonika-site .film-bar :is(button, input):focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) {
+  #salonika-site .film-btn:hover { background: #ffffff18; color: #fff; }
+}
+@media (max-width: 700px) {
+  #salonika-site .film-bar-in { grid-template-columns: 44px minmax(0, 1fr) 44px; width: calc(100% - 16px); gap: 4px; padding-block: 2px; }
+  #salonika-site .film-transport { grid-column: 1; grid-row: 1; }
+  #salonika-site .film-seek { grid-column: 2; grid-row: 1; }
+  #salonika-site .film-btn[data-act="mute"] { grid-column: 3; grid-row: 1; }
+  #salonika-site .film-skip, #salonika-site .film-time { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #salonika-site .film-bar { transition: none; }
+}

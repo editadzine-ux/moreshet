@@ -1,0 +1,34 @@
+/* Small ink illustrations, paired with the room names rather than extra cards. */
+#salonika-site.about-page .about-rooms { counter-reset: rooms; }
+#salonika-site.about-page .about-rooms > .about-room {
+  grid-template-columns: 144px minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  padding-block: 28px;
+  border-color: #bdd4d980;
+}
+#salonika-site.about-page .about-rooms > .about-room:first-child { padding-top: 0; }
+#salonika-site.about-page .about-room-mark { display: grid; justify-items: center; gap: 4px; }
+#salonika-site.about-page .room-art { display: block; width: 144px; height: 144px; overflow: visible; }
+#salonika-site.about-page .about-room-number { padding: 0; font-size: 12px; letter-spacing: .16em; color: #6a8d9a; }
+#salonika-site.about-page .about-room-copy h3 { margin-top: 2px; color: var(--navy); }
+#salonika-site.about-page .about-room-copy p { margin-bottom: 0; }
+#salonika-site.about-page .room-art { object-fit: contain; transition: transform 240ms var(--ease), opacity 240ms var(--ease); }
+#salonika-site.about-page .rooms-enhanced .room-art { opacity: .45; transform: translateY(6px); }
+#salonika-site.about-page .rooms-enhanced .is-in-view .room-art { opacity: 1; transform: none; }
+@media (max-width: 1040px) and (min-width: 761px) {
+  #salonika-site.about-page .about-rooms > .about-room { grid-template-columns: 104px minmax(0, 1fr); gap: 16px; }
+  #salonika-site.about-page .room-art { width: 104px; height: 104px; }
+}
+@media (max-width: 760px) {
+  #salonika-site.about-page .about-rooms > .about-room { grid-template-columns: 104px minmax(0, 1fr); gap: 14px 20px; padding-block: 24px; align-items: center; }
+  #salonika-site.about-page .about-room-mark { grid-column: 1; grid-row: 1; gap: 0; }
+  #salonika-site.about-page .room-art { width: 104px; height: 104px; }
+  #salonika-site.about-page .about-room-copy { display: contents; }
+  #salonika-site.about-page .about-room-copy h3 { grid-column: 2; grid-row: 1; margin: 0; }
+  #salonika-site.about-page .about-room-copy p { grid-column: 1 / -1; margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #salonika-site.about-page .about-rooms .room-art { opacity: 1; transform: none; }
+  #salonika-site.about-page .about-rooms .room-art { transition: none; transform: none; }
+}

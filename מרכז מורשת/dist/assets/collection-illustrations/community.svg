@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" fill="none" stroke="#b6e9e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<style>@keyframes connections{0%,100%{opacity:.5}50%{opacity:1}}.connections{animation:connections 6s ease-in-out infinite}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<path d="M24 216h252" opacity=".35"/>
+<g class="connections" stroke="#61c7c1"><path d="M150 82v24M73 126v-20h154v20M150 106v37"/><circle cx="150" cy="106" r="4" fill="#153c50"/></g>
+<rect x="122" y="25" width="56" height="57" rx="5" fill="#ffffff08"/>
+<circle cx="150" cy="44" r="9"/><path d="M135 69v-4c0-15 30-15 30 0v4"/>
+<rect x="46" y="126" width="54" height="58" rx="5" fill="#ffffff08"/><circle cx="73" cy="145" r="8"/><path d="M59 172v-4c0-13 28-13 28 0v4"/>
+<rect x="200" y="126" width="54" height="58" rx="5" fill="#ffffff08"/><circle cx="227" cy="145" r="8"/><path d="M213 172v-4c0-13 28-13 28 0v4"/>
+<rect x="117" y="147" width="66" height="45" rx="3" fill="#ffffff08"/><path d="m118 150 32 24 32-24m-64 40 22-20m42 20-22-20"/>
+<path d="M106 202h88M118 209h64" opacity=".5"/>
+<path d="M80 72c-12-4-19-14-18-27 12 3 20 12 18 27zm0 0c12-4 19-14 18-27-12 3-20 12-18 27zM80 72v15M220 72c-12-4-19-14-18-27 12 3 20 12 18 27zm0 0c12-4 19-14 18-27-12 3-20 12-18 27zM220 72v15" stroke="#61c7c1" opacity=".7"/>
+</svg>

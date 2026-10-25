@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 480" fill="none">
+  <defs>
+    <pattern id="tower-hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="m-2 8 10-10M6 10l4-4" stroke="#1f4f66" stroke-width=".8" opacity=".38"/></pattern>
+    <g id="tower-leaf"><path d="M0 0Q-10-21 3-37Q17-14 0 0Z" fill="#0f8f86" stroke="#12354a" stroke-width="1.1"/><path d="M0 0 4-31M2-12l-5-8m7-1 5-7" stroke="#12354a" stroke-width=".8"/></g>
+  </defs>
+  <path d="M28 397c80-14 130-4 174-2s103-12 181 3l-22 21H48Z" fill="#0f8f86" opacity=".16"/>
+  <g stroke="#1f4f66" stroke-width="1.3" opacity=".30">
+    <path d="M52 369V176a146 146 0 0 1 292 0v193M64 369V176a134 134 0 0 1 268 0v193"/>
+    <path d="m82 87 10 8m33-42 6 12m65-35v12m66 5-6 12m52 20-10 9M52 173h12m268 0h12"/>
+  </g>
+  <g stroke="#12354a" stroke-linejoin="round">
+    <path d="M54 304h116v82H54z" fill="#e6f1f3" stroke-width="1.6"/>
+    <path d="m44 303 70-29 69 29z" fill="#0f8f86" stroke-width="1.6"/>
+    <path d="m58 298 56-19 54 19M59 311h109M47 386h135" stroke-width="1.2"/>
+    <path d="M67 381v-38a12 12 0 0 1 24 0v38m13 0v-38a12 12 0 0 1 24 0v38m13 0v-38a12 12 0 0 1 24 0v38" fill="#1f4f66" stroke-width="1.2"/>
+    <path d="M160 140q79 24 158 0v236q-79 25-158 0Z" fill="#d9edf0" stroke-width="2"/>
+    <path d="M246 152q44-1 72-12v236q-32 12-72 15Z" fill="#bddce1" stroke="none"/>
+    <path d="M246 152q44-1 72-12v236q-32 12-72 15Z" fill="url(#tower-hatch)" stroke="none"/>
+    <path d="M154 140v-28h17V94h18v18h19V94h18v18h19V94h18v18h19V94h18v18h19v28q-83 28-165 0Z" fill="#d9edf0" stroke-width="2"/>
+    <path d="M155 141q83 27 168 0M158 150q82 26 163 0M161 204q78 23 156 0M161 262q78 22 156 0M161 321q78 22 156 0M154 378q85 29 170 0" stroke-width="1.5"/>
+    <path d="M223 389v-44a13 13 0 0 1 26 0v47" fill="#1f4f66" stroke-width="1.7"/>
+    <path d="M187 197v-16a6 6 0 0 1 12 0v20m69 1v-17a6 6 0 0 1 12 0v15M187 255v-16a6 6 0 0 1 12 0v20m69 1v-17a6 6 0 0 1 12 0v15M187 314v-16a6 6 0 0 1 12 0v20m69 1v-17a6 6 0 0 1 12 0v15" fill="#1f4f66" stroke-width="1.1"/>
+    <path d="m173 162 21 5m13 11 18 2m53-17 24-4m-127 59 21 4m15 14 22 2m47-17 23-5m-128 60 23 5m14 11 18 2m49-14 23-5m-128 65 21 4m84 5 23-4m-37 24 18-2M146 391h187" stroke-width="1"/>
+    <path d="m227 351 4 5-4 5m17-11-4 5 4 5" stroke="#91b6c1" stroke-width=".9"/>
+  </g>
+  <g stroke="#12354a" stroke-linecap="round">
+    <path d="M102 401C85 365 77 316 85 255M107 400C89 360 81 315 89 257" stroke-width="1.4"/>
+    <use href="#tower-leaf" transform="translate(95 373) rotate(-55)"/><use href="#tower-leaf" transform="translate(86 342) rotate(48)"/><use href="#tower-leaf" transform="translate(82 310) rotate(-39)"/><use href="#tower-leaf" transform="translate(85 279) rotate(17)"/>
+    <ellipse cx="73" cy="354" rx="4" ry="7" fill="#1f4f66" transform="rotate(-25 73 354)"/>
+  </g>
+  <g stroke="#1f4f66" stroke-linecap="round" stroke-width="1.2">
+    <path d="M45 407h83m24 0h134m26 0h56M66 420h100m24 0h75m19 0h58M95 433h69m24 0h112M146 446h104"/>
+    <path d="M333 386v-63l29 52h-29m-6-42-20 42h20M301 386h73l-14 13h-44Z" fill="#d9edf0"/>
+    <path d="m338 341 16 31M312 410h47M91 216c7-6 12-6 19 0m0 0c7-6 12-6 19 0M305 63c5-4 9-4 14 0m0 0c5-4 9-4 14 0"/>
+  </g>
+</svg>

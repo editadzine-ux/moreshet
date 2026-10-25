@@ -1,0 +1,383 @@
+/* A quiet photographic gallery and softly colored research gateways.
+   Scope these rules to the two sections to preserve the rest of the site. */
+#salonika-site #activity,
+#salonika-site #resources {
+  padding-block: clamp(48px, 6vw, 88px) !important;
+  background: #fff !important;
+}
+#salonika-site #activity::before,
+#salonika-site #activity::after { display: none !important; }
+#salonika-site #activity .acts-head,
+#salonika-site #resources .doors-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px 64px;
+  margin-bottom: 32px !important;
+  padding-bottom: 0;
+  border: 0;
+}
+#salonika-site #activity .acts-head h2,
+#salonika-site #resources .doors-head h2 {
+  color: var(--ink) !important;
+  animation: none;
+}
+#salonika-site #activity .acts-head h2 em { color: var(--teal-2) !important; }
+#salonika-site #activity .acts-head > p,
+#salonika-site #resources .doors-head > p {
+  max-width: 34ch;
+  margin: 0 0 4px;
+  color: var(--muted);
+}
+#salonika-site #activity .agrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: none !important;
+  grid-auto-rows: auto !important;
+  gap: 4px !important;
+}
+#salonika-site #activity .ac {
+  display: grid;
+  grid-template: 1fr / minmax(0, 1fr);
+  grid-column: auto !important;
+  grid-row: auto !important;
+  min-height: clamp(410px, 35vw, 480px) !important;
+  height: auto !important;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background: #102f3e !important;
+  box-shadow: none !important;
+  animation: none;
+  transform: none;
+  transition: none;
+}
+#salonika-site #activity .ac::before,
+#salonika-site #activity .ac::after,
+#salonika-site :is(#activity, #resources) :is(.spot, .spot-edge) { display: none !important; }
+#salonika-site #activity .ac .ph {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  scale: 1;
+  transform: none;
+  animation: none;
+  transition: none !important;
+}
+#salonika-site #activity .ph img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transition: transform 550ms ease;
+}
+#salonika-site #gateway-archive .ph img { object-position: 50% 48%; }
+#salonika-site #gateway-education .ph img {
+  /* Keep the guide in view when the landscape photo is cropped on mobile. */
+  object-position: 55% 50%;
+}
+#salonika-site #activity #gateway-food .ph { background: #000 !important; }
+#salonika-site #gateway-food .ph img {
+  /* Show the complete collage in its original proportions, including on hover. */
+  object-fit: contain;
+  object-position: 50% 50%;
+  scale: 1;
+  transform: none !important;
+  transition: none;
+}
+#salonika-site #gateway-gallery .ph img { object-position: 50% 50%; }
+#salonika-site #gateway-holidays .ph img { object-position: 45% 20%; }
+#salonika-site #activity .ac .sc-in {
+  --activity-padding: clamp(24px, 2.7vw, 40px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: stretch;
+  justify-self: stretch;
+  width: auto;
+  min-width: 0;
+  gap: 0;
+  padding: var(--activity-padding);
+  color: #fff;
+  background: linear-gradient(180deg, #0a1e28d1 0, #0a1e28b8 160px, #0a1e2800 280px);
+}
+#salonika-site #activity .ac h3 {
+  font-size: clamp(1.625rem, 1.2rem + 1vw, 2.125rem) !important;
+  font-weight: 500;
+  line-height: 1.2 !important;
+  letter-spacing: 0;
+  max-width: 25ch;
+  margin: 0 0 8px;
+  color: #fff;
+  text-shadow: none;
+  text-wrap: balance;
+}
+#salonika-site #activity .ac p {
+  max-width: 38ch;
+  margin: 0;
+  color: #f3f5f5;
+  font-size: 1rem !important;
+  font-weight: 400;
+  line-height: 1.55 !important;
+  text-shadow: none;
+}
+#salonika-site #activity .activity-links {
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  margin-top: auto;
+  margin-inline: calc(-1 * var(--activity-padding));
+  margin-bottom: calc(-1 * var(--activity-padding));
+  padding: 64px var(--activity-padding) var(--activity-padding);
+  background: linear-gradient(180deg, transparent, #0a1e2899 64px);
+}
+#salonika-site #activity .ac .more {
+  position: static;
+  align-self: end;
+  justify-content: center;
+  width: 140px;
+  min-height: 42px;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid #ffffffb3;
+  border-radius: 2px;
+  background: #0a1e2833;
+  color: #fff;
+  font-size: .875rem;
+  line-height: 1.4;
+  font-weight: 400;
+  text-shadow: none;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+/* A single primary action on each photograph. */
+#salonika-site #activity .ac .more::before { content: ""; position: absolute; inset: 0; z-index: 2; }
+#salonika-site #activity .ac .more::after { display: none; }
+#salonika-site #activity .ac .more:focus-visible { outline: 0; }
+#salonika-site #activity .ac .more:focus-visible::before { outline: 3px solid #fff; outline-offset: -7px; }
+#salonika-site #activity .ac:focus-within .more { border-color: #fff; background: #0a1e28b3; }
+#salonika-site #activity .ac:active .ph img { transform: scale(1); }
+
+/* Five architectural portals: color lives in the arch, type sits on the page. */
+#salonika-site #resources {
+  --gate-ink: var(--ink);
+  --gate-muted: var(--muted);
+  background: var(--paper) !important;
+}
+#salonika-site #resources .doors-head { margin-bottom: 48px !important; }
+#salonika-site #resources .kick { margin-bottom: 14px; color: var(--copper); }
+#salonika-site #resources .doors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px 24px;
+}
+#salonika-site #resources .door {
+  --gate-surface: var(--mist);
+  --gate-accent: var(--navy);
+  --gate-frame: var(--teal);
+  position: relative;
+  display: flex;
+  flex: 0 1 calc((100% - 96px) / 5);
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0;
+  color: var(--gate-ink) !important;
+  background: transparent !important;
+  box-shadow: none;
+  text-align: start;
+  animation: none;
+  transform: none;
+  transition: none;
+}
+#salonika-site #resources #resource-dictionary {
+  --gate-surface: var(--navy);
+  --gate-accent: var(--paper);
+  --gate-frame: var(--sand);
+}
+#salonika-site #resources #resource-library {
+  --gate-surface: var(--sand);
+  --gate-accent: var(--ink);
+  --gate-frame: var(--copper);
+}
+#salonika-site #resources #resource-stack {
+  --gate-surface: var(--tint);
+  --gate-accent: var(--teal-2);
+  --gate-frame: var(--teal);
+}
+#salonika-site #resources #resource-search {
+  --gate-surface: var(--parch);
+  --gate-accent: var(--navy);
+  --gate-frame: var(--copper);
+}
+#salonika-site #resources .door::after { display: none; }
+#salonika-site #resources .gate-art {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 264px;
+  margin-bottom: 26px;
+  border-radius: 150px 150px 4px 4px;
+  background: var(--gate-surface);
+  color: var(--gate-accent);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+#salonika-site #resources .gate-art::before,
+#salonika-site #resources .gate-art::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 12px;
+  border: 1px solid var(--gate-frame);
+  border-radius: inherit;
+  opacity: .45;
+  pointer-events: none;
+}
+#salonika-site #resources .gate-art::after { inset: 22px; opacity: .18; }
+#salonika-site #resources .gate-art small {
+  position: absolute;
+  inset-block-start: 35px;
+  inset-inline: 0;
+  font-family: var(--font);
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: var(--gate-accent);
+}
+#salonika-site #resources .door .sym {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--gate-accent);
+  transform: none;
+  transition: none;
+}
+#salonika-site #resources .door .sym svg { width: 72px; height: 72px; stroke-width: 1.05px; }
+#salonika-site #resources .door-copy { align-items: start; gap: 10px; margin: 0 0 20px; }
+#salonika-site #resources .door-copy b {
+  min-height: 2.5em;
+  max-width: none;
+  color: var(--gate-ink);
+  font-size: clamp(1.5rem, 1.15rem + .65vw, 1.75rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 500;
+}
+#salonika-site #resources .door-copy em {
+  max-width: 28ch;
+  color: var(--gate-muted);
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+#salonika-site #resources .door-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--gate-ink);
+  font-family: var(--font);
+  font-size: .875rem;
+  line-height: 1.5;
+}
+#salonika-site #resources .door .open {
+  position: static;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--gate-ink);
+  font-size: 22px;
+  transform: none;
+  transition: transform 180ms ease;
+}
+#salonika-site #resources .door:focus-visible { outline: 2px solid var(--gate-ink); outline-offset: 7px; }
+#salonika-site #resources .door:focus-visible .gate-art { box-shadow: 0 0 0 2px var(--gate-ink); }
+#salonika-site #resources .door:active .gate-art { transform: translateY(0); }
+@media (hover: hover) and (pointer: fine) {
+  #salonika-site #activity .ac:hover .ph img { transform: scale(1.025); }
+  #salonika-site #activity .ac:hover .more { border-color: #fff; background: #0a1e28b3; }
+  #salonika-site #resources .door:hover { transform: none; box-shadow: none; }
+  #salonika-site #resources .door:hover .gate-art { transform: translateY(-5px); box-shadow: 0 14px 18px -17px #1f4f6659; }
+  #salonika-site #resources .door:hover .open { transform: translateX(-4px); }
+}
+@media (width <= 1100px) {
+  #salonika-site #resources .door { flex-basis: calc((100% - 48px) / 3); }
+  #salonika-site #resources .gate-art { min-height: 250px; }
+}
+@media (width <= 1000px) {
+  #salonika-site #activity .acts-head,
+  #salonika-site #resources .doors-head { gap: 20px 32px; }
+}
+@media (width <= 760px) {
+  #salonika-site #activity .acts-head,
+  #salonika-site #resources .doors-head { flex-direction: column; align-items: start; gap: 16px; margin-bottom: 28px !important; }
+  #salonika-site #activity .acts-head > p,
+  #salonika-site #resources .doors-head > p { max-width: 42ch; }
+  #salonika-site #activity .agrid { grid-template-columns: minmax(0, 1fr) !important; }
+  #salonika-site #activity .ac { min-height: 420px !important; }
+  #salonika-site #activity .ac .sc-in { --activity-padding: 28px; }
+  #salonika-site #resources .doors-grid { gap: 36px 20px; }
+  #salonika-site #resources .door { flex-basis: calc((100% - 20px) / 2); }
+  #salonika-site #resources .gate-art { min-height: 230px; margin-bottom: 20px; }
+}
+@media (width <= 560px) {
+  #salonika-site #activity .ac { min-height: 400px !important; }
+  #salonika-site #activity .ac .sc-in { --activity-padding: 24px; }
+  #salonika-site #resources .gate-art { min-height: 210px; }
+  #salonika-site #resources .door .sym svg { width: 60px; height: 60px; }
+}
+@media (width <= 420px) {
+  #salonika-site #resources .door {
+    display: grid;
+    flex-basis: 100%;
+    grid-template-columns: 100px minmax(0, 1fr);
+    grid-template-areas: "art copy" "art footer";
+    gap: 0 20px;
+  }
+  #salonika-site #resources .gate-art { grid-area: art; min-height: 180px; margin: 0; border-radius: 60px 60px 3px 3px; }
+  #salonika-site #resources .gate-art::before { inset: 7px; }
+  #salonika-site #resources .gate-art::after { inset: 13px; }
+  #salonika-site #resources .gate-art small { inset-block-start: 24px; }
+  #salonika-site #resources .door .sym { width: 64px; height: 64px; }
+  #salonika-site #resources .door .sym svg { width: 44px; height: 44px; }
+  #salonika-site #resources .door-copy { grid-area: copy; margin-bottom: 20px; }
+  #salonika-site #resources .door-copy b { min-height: 0; }
+  #salonika-site #resources .door-foot { grid-area: footer; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #salonika-site :is(#activity, #resources) *,
+  #salonika-site :is(#activity, #resources) *::before,
+  #salonika-site :is(#activity, #resources) *::after { animation: none !important; transition: none !important; }
+  #salonika-site #activity .ac .ph img,
+  #salonika-site #resources :is(.gate-art, .open) { transform: none !important; }
+}
+@media (forced-colors: active) {
+  #salonika-site #activity .ac .sc-in { color: CanvasText; background: Canvas; }
+  #salonika-site #activity .ac :is(h3, p, a) { color: CanvasText; }
+  #salonika-site #resources .gate-art { border: 1px solid CanvasText; }
+  #salonika-site #activity .ac .more:focus-visible::before,
+  #salonika-site #resources .door:focus-visible { outline-color: Highlight; }
+}

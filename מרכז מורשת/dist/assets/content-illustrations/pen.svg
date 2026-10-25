@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 380" fill="none" stroke="#b6e9e5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><style>*{transform-box:fill-box;transform-origin:center}
+@keyframes fl{0%,12%{transform:scaleX(1)}42%,58%{transform:scaleX(-1)}88%,100%{transform:scaleX(1)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes tw{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.15}50%{opacity:.6}}
+@keyframes slide{0%,100%{transform:translate(0,0)}50%{transform:translate(5px,-4px)}}
+@keyframes ty{0%{stroke-dashoffset:var(--l)}45%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:var(--l)}}
+@keyframes film{to{transform:translateY(-110px)}}
+@keyframes mag{0%,100%{transform:translate(0,0)}50%{transform:translate(-46px,-34px)}}
+@keyframes rock{0%,100%{transform:rotate(-1.4deg)}50%{transform:rotate(1.4deg)}}
+@keyframes glow{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style><rect x="44" y="26" width="196" height="300" rx="3" fill="#153c50"/><path d="M62 54h110" stroke-width="5" opacity=".9"/><path d="M62 72h70" opacity=".6"/><path d="M62 88h160" stroke-width="1.5"/><path d="M62 106h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 0.00s infinite"/><path d="M62 120h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 0.18s infinite"/><path d="M62 134h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 0.36s infinite"/><path d="M62 148h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 0.54s infinite"/><path d="M62 162h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 0.72s infinite"/><path d="M62 176h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 0.90s infinite"/><path d="M62 190h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 1.08s infinite"/><path d="M62 204h160" opacity=".6" style="--l:160;stroke-dasharray:160;animation:ty 7s ease-in-out 1.26s infinite"/><path d="M62 218h80" opacity=".6" style="--l:80;stroke-dasharray:80;animation:ty 7s ease-in-out 1.44s infinite"/><circle cx="212" cy="124" r="5"/><circle cx="212" cy="152" r="5"/><path d="M62 242h160M62 256h160M62 270h96" opacity=".55"/><g style="animation:mag 7s ease-in-out infinite"><circle cx="206" cy="262" r="44" fill="#153c5099"/><circle cx="206" cy="262" r="34" stroke-width="3.4"/><path d="M232 288l32 38" stroke-width="6"/></g></svg>

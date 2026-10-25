@@ -1,0 +1,196 @@
+/* The collection directory reuses the site's existing type, colors and photo header. */
+#salonika-site .collection-soon {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 7px;
+  padding: 5px 11px;
+  border: 1px solid #1f4f66;
+  border-radius: 3px;
+  background: #1f4f66;
+  color: #fff;
+  font: 650 .875rem/1.4 var(--font);
+  white-space: nowrap;
+}
+#salonika-site.collections-page .collections-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px 64px;
+  padding-block: 24px 36px;
+}
+#salonika-site.collections-page .collections-intro strong { color: var(--ink); font-weight: 600; }
+#salonika-site .collection-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  padding-block: 16px;
+  border-block: 1px solid var(--line);
+}
+#salonika-site .collection-index a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--teal-2);
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+#salonika-site .collection-groups { padding-block: 16px 72px; }
+#salonika-site .collection-group { padding-top: 44px; }
+#salonika-site .collection-group-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+#salonika-site .collection-group-heading h2 {
+  font-size: var(--type-card) !important;
+  font-weight: 500 !important;
+  color: var(--teal-2);
+  margin: 0;
+}
+#salonika-site .collection-group-heading > span { color: var(--muted); font-size: .875rem; white-space: nowrap; }
+
+/* Heritage illustrations frame a compact, browsable archive. */
+#salonika-site.collections-page .about-header-image img { object-position: 50% 42%; filter: saturate(.8) contrast(1.02); }
+#salonika-site.collections-page .about-header--brand .about-header-image:after { background: linear-gradient(180deg, #194b6522, #12354a66); }
+#salonika-site .collections-status {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: #e8f1f1;
+  border: 1px solid #9bbfbe;
+  border-inline-start: 5px solid #1f4f66;
+}
+#salonika-site .collections-status-stamp {
+  display: grid;
+  place-content: center;
+  flex: 0 0 92px;
+  min-height: 86px;
+  padding: 12px;
+  border: 1px solid #fff9;
+  outline: 4px solid #1f4f66;
+  background: #1f4f66;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
+#salonika-site .collections-status-stamp > span { font: 600 1.75rem/1.2 var(--display); }
+#salonika-site .collections-status-stamp small { font-size: .875rem; margin-top: 5px; }
+#salonika-site .collections-status h2 { font-size: 1.5rem !important; font-weight: 600 !important; margin: 0 0 6px; color: var(--navy); }
+#salonika-site.collections-page .collections-status p { font-size: 1rem !important; max-width: 65ch; }
+#salonika-site .collection-group-layout { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(240px, 1fr); align-items: start; gap: 36px; }
+#salonika-site .collection-topics { display: grid; gap: 10px; }
+#salonika-site .collection-topic {
+  min-width: 0;
+  border: 1px solid #cadbdf;
+  border-radius: 4px;
+  background: #fff;
+  scroll-margin-top: 24px;
+}
+#salonika-site .collection-topic:target { border-color: var(--teal-2); box-shadow: 0 0 0 3px #0b706b20; }
+#salonika-site .collection-topic > summary { list-style: none; padding: 18px 20px; }
+#salonika-site .collection-topic > summary::-webkit-details-marker { display: none; }
+#salonika-site .collection-topic > summary:hover { background: #f0f6f5; }
+#salonika-site .collection-topic > summary:focus-visible { outline: 3px solid var(--teal-2); outline-offset: 3px; }
+#salonika-site .collection-topic > summary h3 {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto 22px;
+  gap: 14px;
+  align-items: center;
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.375rem !important;
+  font-weight: 500;
+  line-height: 1.35 !important;
+  text-wrap: pretty;
+}
+#salonika-site .collection-topic-icon { display: grid; place-items: center; width: 46px; height: 46px; background: #e7f0f2; border: 1px solid #d7e5e7; color: #245b74; border-radius: 3px; }
+#salonika-site .collection-topic-icon svg { display: block; width: 30px; height: 30px; }
+#salonika-site .collection-topic-toggle { font: 300 28px/1 var(--font); color: var(--teal-2); text-align: center; transition: transform .18s ease; }
+#salonika-site .collection-topic[open] { border-color: #7ca8ad; }
+#salonika-site .collection-topic[open] > summary { background: #edf4f3; border-bottom: 1px solid #d0dfdf; }
+#salonika-site .collection-topic[open] .collection-topic-toggle { transform: none; }
+#salonika-site .collection-pending {
+  position: relative;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 7px;
+  padding: 26px 80px 28px 24px;
+  background: #f7faf9;
+  overflow: hidden;
+}
+#salonika-site .collection-pending:after { content: ''; position: absolute; inset: 14px; border: 1px solid #dbe7e5; pointer-events: none; }
+#salonika-site .collection-pending-label { font-size: .8125rem; font-weight: 600; color: var(--teal-2); }
+#salonika-site .collection-pending strong { font: 600 1.5rem/1.3 var(--display); color: var(--navy); }
+#salonika-site.collections-page .collection-pending p { margin: 0; font-size: .9375rem !important; color: var(--muted); }
+#salonika-site .collection-art { margin: 0; min-width: 0; position: sticky; top: calc(var(--salonika-nav-height, 130px) + 24px); }
+#salonika-site .collection-art-window { position: relative; aspect-ratio: 1; overflow: hidden; background: #f4f0e6; border: 1px solid #d7ddd6; }
+#salonika-site .collection-art-window:after { content: ''; position: absolute; inset: 12px; border: 1px solid #fff9; pointer-events: none; }
+#salonika-site .collection-art-window img { display: block; width: 100%; height: 100%; object-fit: cover; }
+#salonika-site .collection-art--city img { object-position: 100% 50%; }
+#salonika-site .collection-art--culture img { object-position: 0% 50%; }
+#salonika-site .collection-art--families img { object-position: 50% 50%; }
+#salonika-site .collection-art figcaption { position: relative; padding: 18px 0 0; font: 500 1.125rem/1.5 var(--display); color: var(--navy); }
+#salonika-site .collection-art-rule { display: block; width: 40px; height: 2px; margin-bottom: 10px; background: var(--teal-2); }
+#salonika-site .collection-art figcaption small { display: block; margin-top: 7px; font: 400 .75rem/1.5 var(--font); color: var(--muted); }
+@media (width <= 1000px) {
+  #salonika-site.collections-page .collections-intro { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  #salonika-site.collections-page .collections-intro .about-intro-action { justify-self: start; }
+  #salonika-site .collection-group-layout { grid-template-columns: minmax(0, 1fr) minmax(190px, .55fr); gap: 24px; }
+  #salonika-site .collection-topic > summary { padding: 16px; }
+  #salonika-site .collection-topic > summary h3 { grid-template-columns: 38px minmax(0, 1fr) auto 20px; gap: 10px; font-size: 1.25rem !important; }
+  #salonika-site .collection-topic-icon { width: 38px; height: 38px; }
+  #salonika-site .collection-topic-icon svg { width: 26px; height: 26px; }
+  #salonika-site .collection-pending { padding-inline: 28px; }
+}
+@media (width <= 760px) {
+  #salonika-site .collection-group-layout { grid-template-columns: minmax(0, 1fr); }
+  #salonika-site .collection-art { position: static; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+  #salonika-site .collection-art-window { aspect-ratio: 1; }
+  #salonika-site .collection-art figcaption { padding: 0; }
+  #salonika-site .collections-status { gap: 20px; padding: 22px; }
+  #salonika-site .collections-status-stamp { flex-basis: 76px; min-height: 76px; }
+  #salonika-site .collections-status-stamp > span { font-size: 1.5rem; }
+  #salonika-site .collection-index { gap: 0 20px; }
+  #salonika-site .collection-group-heading { align-items: start; }
+  #salonika-site .collection-groups { padding-bottom: 48px; }
+}
+@media (width <= 420px) {
+  #salonika-site .collection-topic > summary { padding: 14px 12px; }
+  #salonika-site .collection-topic > summary h3 { grid-template-columns: 32px minmax(0, 1fr) auto 18px; gap: 8px; font-size: 1.125rem !important; }
+  #salonika-site .collection-topic-icon { width: 32px; height: 36px; }
+  #salonika-site .collection-topic-icon svg { width: 24px; height: 24px; }
+  #salonika-site .collection-topic .collection-soon { padding: 4px 7px; font-size: .8125rem; }
+  #salonika-site .collections-status { align-items: start; padding: 20px 16px; gap: 16px; }
+  #salonika-site .collections-status h2 { font-size: 1.25rem !important; }
+  #salonika-site .collections-status-stamp { flex-basis: 64px; min-height: 70px; padding: 8px; }
+  #salonika-site .collection-art { gap: 16px; }
+  #salonika-site .collection-art figcaption { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #salonika-site .collection-topic-toggle { transition: none; }
+}
+
+/* Explicit actions accompany native details, including a close action at the end. */
+#salonika-site .collection-topic > summary h3 { grid-template-columns: 46px minmax(0, 1fr) auto 76px; }
+#salonika-site .collection-topic-action { display: inline-flex; align-items: center; justify-content: flex-end; gap: 8px; color: #245b74; font: 500 .8125rem/1.4 var(--font); }
+#salonika-site .topic-close-label { display: none; }
+#salonika-site .collection-topic[open] .topic-open-label { display: none; }
+#salonika-site .collection-topic[open] .topic-close-label { display: inline; }
+#salonika-site .collection-topic-close { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; margin-top: 14px; padding: 9px 18px; border: 1px solid #6b9da6; border-radius: 4px; background: #fff; color: #12354a; font: 500 .9375rem/1.4 var(--font); cursor: pointer; position: relative; z-index: 1; }
+#salonika-site .collection-topic-close > span { font-size: 24px; line-height: 1; }
+#salonika-site .collection-topic-close:hover { background: #e7f0f2; }
+#salonika-site .collection-topic-close:focus-visible { outline: 2px solid #0f8a84; outline-offset: 3px; }
+@media (width <= 600px) {
+  #salonika-site .collection-topic > summary h3 { grid-template-columns: 32px minmax(0, 1fr) 64px; gap: 7px 10px; }
+  #salonika-site .collection-topic-icon { grid-column: 1; grid-row: 1 / span 2; }
+  #salonika-site .collection-topic > summary h3 > span:nth-child(2) { grid-column: 2; grid-row: 1; }
+  #salonika-site .collection-topic .collection-soon { grid-column: 2; grid-row: 2; justify-self: start; }
+  #salonika-site .collection-topic-action { grid-column: 3; grid-row: 1 / span 2; }
+}

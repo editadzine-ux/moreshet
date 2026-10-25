@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" fill="none" stroke="#b6e9e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<style>@keyframes folio{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.folio{animation:folio 6s ease-in-out infinite}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<path d="M26 214h248" opacity=".35"/>
+<g class="folio"><path d="M67 118V52h54l13 12h55v54" fill="#ffffff08"/><path d="M82 111V38h105l25 25v60M187 38v25h25"/>
+<path d="M98 59h54M98 73h68M98 87h47" opacity=".65"/>
+<rect x="146" y="84" width="89" height="66" rx="3" fill="#153c50"/>
+<circle cx="211" cy="101" r="6" stroke="#61c7c1"/>
+<path d="m155 136 21-26 18 19 13-14 19 21" stroke="#61c7c1"/></g>
+<path d="M49 125h202l-11 78H60z" fill="#ffffff08"/>
+<path d="M49 125 37 111h85l13 14M251 125l12-14h-41"/>
+<rect x="120" y="154" width="60" height="25" rx="3" stroke="#61c7c1"/>
+<path d="M138 166h24M66 189h168" opacity=".6"/>
+<path d="M39 72v10M34 77h10M255 62v12M249 68h12" stroke="#61c7c1" opacity=".65"/>
+</svg>

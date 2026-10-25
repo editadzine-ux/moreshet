@@ -1,0 +1,188 @@
+/* Shared photographic opening; all heading styles come from typography.css. */
+#salonika-site.about-page .about-breadcrumb {
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  padding-block: 18px;
+  line-height: 1.6;
+}
+#salonika-site.about-page .about-header-image {
+  height: clamp(230px, 23vw, 340px);
+  overflow: hidden;
+  background: var(--paper);
+}
+#salonika-site.about-page .about-header-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 62%;
+}
+#salonika-site.team-page .about-header-image img { object-position: 50% 47%; }
+#salonika-site.founder-page .about-header-image img { object-position: 50% 64%; }
+/* Shared brand treatment across all About pages.
+   Traces of the original colors sit beneath a stronger wash of the brand's blues. */
+#salonika-site.about-page .about-header--brand .about-header-image {
+  position: relative;
+  isolation: isolate;
+  background: var(--navy);
+}
+#salonika-site.about-page .about-header--brand .about-header-image img {
+  filter: saturate(.38) contrast(1.02);
+}
+#salonika-site.about-page .about-header--brand .about-header-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(31 79 102 / 42%), rgb(11 36 51 / 56%));
+}
+#salonika-site.about-page .about-header-body {
+  position: relative;
+  isolation: isolate;
+  margin-top: -56px;
+  padding-block: 30px 28px;
+  background: #fff;
+}
+#salonika-site.about-page .about-header-body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -28px;
+  background: #fff;
+}
+#salonika-site.about-page .about-header-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-bottom: 18px;
+}
+#salonika-site.about-page .about-header-eyebrow .kick { margin: 0; }
+#salonika-site.about-page .about-header-caption { color: var(--muted); font-size: var(--type-label); line-height: 1.5; }
+/* Page links stay distinct from the section links within each page. */
+#salonika-site.about-page .about-pages {
+  display: flex;
+  align-items: stretch;
+  gap: 36px;
+  border-block: 1px solid var(--line);
+}
+#salonika-site.about-page .about-pages a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 58px;
+  padding: 14px 4px;
+  color: var(--muted);
+  font-size: var(--type-detail);
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+#salonika-site.about-page .about-pages a[aria-current="page"] { color: var(--navy); font-weight: 600; }
+#salonika-site.about-page .about-pages a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -1px;
+  height: 3px;
+  background: var(--teal);
+}
+#salonika-site.about-page .about-pages a:hover { color: var(--teal-2); }
+#salonika-site.about-page .about-pages a:hover:not([aria-current]) { text-decoration: underline; text-underline-offset: 6px; }
+/* Introductions connect the opening to each page's content. */
+#salonika-site.about-page :is(.about-intro, .team-intro, .founder-intro) {
+  display: block;
+  padding-block: clamp(32px, 3.5vw, 48px) clamp(40px, 4.5vw, 64px);
+}
+#salonika-site.about-page .about-intro-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--about-gap);
+  align-items: start;
+}
+#salonika-site.about-page .about-intro .about-intro-copy > p { margin: 0; }
+#salonika-site.about-page :is(.team-intro, .founder-intro-copy) {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(230px, 1fr);
+  align-items: center;
+  gap: 24px var(--about-gap);
+}
+#salonika-site.about-page :is(.team-intro-copy, .founder-intro-copy) { padding: 0; border: 0; }
+#salonika-site.about-page .team-intro-copy { min-width: 0; }
+#salonika-site.about-page .team-intro .team-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  padding: 0;
+  border: 0;
+}
+#salonika-site.about-page .team-intro .team-index a { gap: 8px; min-height: 50px; padding-block: 10px; border-bottom: 1px solid var(--line); }
+#salonika-site.about-page .team-board { padding-top: 0; }
+#salonika-site.about-page :is(.team-intro-copy, .founder-intro-copy) > p { margin: 0; }
+#salonika-site.about-page .about-intro-action {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-size: var(--type-detail);
+  font-weight: 600;
+  line-height: 1.5;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+#salonika-site.about-page .about-intro-action svg { flex: 0 0 20px; width: 20px; height: 20px; }
+#salonika-site.about-page .about-intro-action:hover { border-color: var(--teal-2); background: var(--paper); }
+/* Continue to the other About pages before the shared contact form. */
+#salonika-site.about-page .about-continue { padding-block: 32px; border-block: 1px solid var(--line); background: #fff; }
+#salonika-site.about-page .about-continue-inner {
+  display: grid;
+  grid-template-columns: .8fr 1fr 1fr;
+  align-items: center;
+  gap: 24px 40px;
+}
+#salonika-site.about-page .about-continue .kick { margin: 0; }
+#salonika-site.about-page .about-continue a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  gap: 24px;
+  padding-inline-start: 32px;
+  border-inline-start: 1px solid var(--line);
+  color: var(--navy);
+  font-size: var(--type-body);
+}
+#salonika-site.about-page .about-continue a span[aria-hidden] { color: var(--teal-2); }
+#salonika-site.about-page .about-continue a:hover { color: var(--teal-2); text-decoration: underline; text-underline-offset: 6px; }
+@media (width <= 900px) {
+  #salonika-site.about-page :is(.team-intro, .founder-intro-copy) { grid-template-columns: minmax(0, 1fr); }
+  #salonika-site.about-page .about-intro-action { justify-self: start; }
+  #salonika-site.about-page .about-continue-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #salonika-site.about-page .about-continue .kick { grid-column: 1 / -1; }
+  #salonika-site.about-page .about-continue a { padding-inline-start: 0; border-inline-start: 0; }
+}
+@media (width <= 760px) {
+  #salonika-site.about-page .about-intro-copy { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+@media (width <= 700px) {
+  #salonika-site.about-page .about-breadcrumb { padding-block: 14px; }
+  #salonika-site.about-page .about-header-image { height: 220px; }
+  #salonika-site.about-page .about-header-image img { object-position: 42% 60%; }
+  #salonika-site.team-page .about-header-image img { object-position: 57% 48%; }
+  #salonika-site.founder-page .about-header-image img { object-position: 34% 60%; }
+  #salonika-site.about-page .about-header-body { margin-top: -28px; padding-block: 24px; }
+  #salonika-site.about-page .about-header-body::before { inset-inline: -12px; }
+  #salonika-site.about-page .about-header-eyebrow { display: block; margin-bottom: 16px; }
+  #salonika-site.about-page .about-header-caption { display: block; margin-top: 6px; }
+  #salonika-site.about-page .about-pages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  #salonika-site.about-page .about-pages a { min-width: 0; min-height: 56px; padding-inline: 0; }
+  #salonika-site.about-page .about-continue-inner { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  #salonika-site.about-page .about-continue a + a { border-top: 1px solid var(--line); padding-top: 12px; }
+}

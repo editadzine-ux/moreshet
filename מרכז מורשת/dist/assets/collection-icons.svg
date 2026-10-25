@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="documents" viewBox="0 0 48 48"><path d="M12 5h17l8 8v30H12zM29 5v9h8M18 21h13M18 27h13M18 33h8"/><path d="M7 12v31" opacity=".45"/></symbol>
+  <symbol id="photographs" viewBox="0 0 48 48"><rect x="8" y="10" width="34" height="28" rx="3"/><circle cx="32" cy="19" r="3"/><path d="m9 32 10-11 9 9 5-5 8 9M5 16v26h31"/></symbol>
+  <symbol id="manuscripts" viewBox="0 0 48 48"><path d="M28 8H9v33h29V24M16 31l3-9L35 6a3 3 0 0 1 5 5L24 27zM31 10l5 5M19 22l5 5M15 35h15"/></symbol>
+  <symbol id="historical-press" viewBox="0 0 48 48"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M12 13h24M12 18h24M25 24h11M25 29h11M12 35h24"/><rect x="12" y="24" width="8" height="6"/></symbol>
+  <symbol id="press-clippings" viewBox="0 0 48 48"><path d="m10 8 27-3 4 33-27 3zM17 13l14-2M18 19l14-2M19 25l7-1M7 17 2 42l29 3"/><path d="m31 26 6 5m-6 0 6-5"/></symbol>
+  <symbol id="objects" viewBox="0 0 48 48"><path d="M17 6h14M19 6v10c0 4-9 6-9 14a14 14 0 0 0 28 0c0-8-9-10-9-14V6M12 25h24M11 32h26M16 40h16"/><path d="m18 27 3 4 3-4 3 4 3-4" opacity=".5"/></symbol>
+  <symbol id="songs-music" viewBox="0 0 48 48"><path d="M18 34V12l22-5v22M18 20l22-5"/><ellipse cx="12" cy="35" rx="6" ry="5"/><ellipse cx="34" cy="30" rx="6" ry="5"/></symbol>
+  <symbol id="recipes" viewBox="0 0 48 48"><path d="M9 21h30v13a7 7 0 0 1-7 7H16a7 7 0 0 1-7-7zM9 25H5v6h4M39 25h4v6h-4M6 21h36M16 17c-5-4 5-6 0-10M24 17c-5-4 5-6 0-10M32 17c-5-4 5-6 0-10"/></symbol>
+  <symbol id="folktales" viewBox="0 0 48 48"><path d="M24 13c-6-4-13-4-19-2v27c6-2 13-2 19 2 6-4 13-4 19-2V11c-6-2-13-2-19 2zM24 13v27M11 19h7M11 25h7M30 19h7M30 25h7"/></symbol>
+  <symbol id="proverbs" viewBox="0 0 48 48"><path d="M11 7h26a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6H20l-9 7v-7a6 6 0 0 1-6-6V13a6 6 0 0 1 6-6zM15 17h6v6h-6c0 4 2 6 5 7M28 17h6v6h-6c0 4 2 6 5 7"/></symbol>
+  <symbol id="names-records" viewBox="0 0 48 48"><rect x="8" y="7" width="32" height="36" rx="3"/><path d="M18 4h12v7H18zM23 20h10M23 28h10M23 36h10M13 20l2 2 4-4M13 28l2 2 4-4M13 36l2 2 4-4"/></symbol>
+  <symbol id="people-family-trees" viewBox="0 0 48 48"><circle cx="24" cy="10" r="5"/><circle cx="10" cy="36" r="5"/><circle cx="38" cy="36" r="5"/><path d="M24 15v7M10 31v-9h28v9M24 22v9"/><circle cx="24" cy="36" r="5"/></symbol>
+  <symbol id="greek-communities" viewBox="0 0 48 48"><path d="m5 18 19-11 19 11M9 18h30M9 39h30M5 43h38M12 21v14M20 21v14M28 21v14M36 21v14"/><path d="m24 2 2 3-2 3-2-3z"/></symbol>
+  <symbol id="immigration-settlement" viewBox="0 0 48 48"><path d="m25 20 10-8 10 8M28 19v16h14V19M33 35v-9h5v9M5 39c0-10 15-5 15-14 0-6-10-3-10-9"/><path d="M16 9c0 5-6 9-6 9S4 14 4 9a6 6 0 0 1 12 0z"/><circle cx="10" cy="9" r="2"/></symbol>
+  <symbol id="testimonies" viewBox="0 0 48 48"><rect x="18" y="5" width="12" height="24" rx="6"/><path d="M12 23a12 12 0 0 0 24 0M24 35v8M17 43h14M21 12h6M21 17h6M5 17v10M43 17v10"/></symbol>
+</svg>

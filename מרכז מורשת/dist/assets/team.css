@@ -1,0 +1,223 @@
+/* Team follows the shared Postea/Adapter hierarchy and the original site palette. */
+#salonika-site.team-page {
+  --team-space: var(--about-space);
+}
+#salonika-site.team-page .team-symbols { position: absolute; overflow: hidden; }
+#salonika-site.team-page .about-breadcrumb { flex-wrap: wrap; gap: 6px 12px; }
+#salonika-site.team-page .team-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 44px;
+  margin-top: 16px;
+  color: var(--teal-2);
+  font-size: var(--type-detail);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+#salonika-site.team-page .team-text-link:hover { color: var(--navy); }
+#salonika-site.team-page .team-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 40px;
+  padding-block: 14px;
+  border-block: 1px solid var(--line);
+}
+#salonika-site.team-page .team-index a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 44px;
+  color: var(--ink);
+  font-size: var(--type-detail);
+}
+#salonika-site.team-page .team-index a span { color: var(--teal-2); }
+#salonika-site.team-page .team-index a:hover { color: var(--teal-2); text-decoration: underline; text-underline-offset: 6px; }
+#salonika-site.team-page .team-section { padding-block: var(--team-space); }
+#salonika-site.team-page .team-section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin-bottom: 32px;
+}
+#salonika-site.team-page .team-section-heading h2 { margin: 0; }
+#salonika-site.team-page .team-section-caption { font-size: var(--type-detail); color: var(--muted); }
+#salonika-site.team-page :is(.team-leadership, .team-members, .team-management-list, .team-honor ul) { list-style: none; padding: 0; margin: 0; }
+#salonika-site.team-page .team-person {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+}
+#salonika-site.team-page .team-person-copy { min-width: 0; }
+#salonika-site.team-page .team-person h3 { margin: 0 0 6px; }
+#salonika-site.team-page .team-person .team-role {
+  margin: 0;
+  font-size: var(--type-detail) !important;
+  line-height: 1.6 !important;
+  color: var(--muted);
+}
+/* Neutral portrait frames keep people prominent without large color blocks. */
+#salonika-site.team-page .team-portrait {
+  display: grid;
+  place-items: end center;
+  flex: 0 0 76px;
+  width: 76px;
+  height: 88px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+  color: var(--muted);
+  background: var(--paper);
+}
+#salonika-site.team-page .team-portrait svg { display: block; width: 86%; height: 90%; }
+#salonika-site.team-page .team-portrait img { width: 100%; height: 100%; object-fit: cover; }
+#salonika-site.team-page .team-leadership-panel {
+  padding: 28px 36px 40px;
+  margin-bottom: 40px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--navy);
+}
+#salonika-site.team-page .team-content .team-leadership-label {
+  max-width: none;
+  padding-bottom: 22px;
+  margin: 0 0 32px;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--type-label) !important;
+  font-weight: 600;
+  color: var(--navy);
+}
+#salonika-site.team-page .team-leadership {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+#salonika-site.team-page .team-leadership .team-person {
+  padding: 0;
+  gap: 28px;
+  color: var(--ink);
+}
+#salonika-site.team-page .team-leadership .team-person + .team-person {
+  padding-inline-start: 36px;
+  border-inline-start: 1px solid var(--line);
+}
+#salonika-site.team-page .team-leadership .team-portrait {
+  flex-basis: 132px;
+  width: 132px;
+  height: 154px;
+  color: var(--navy);
+  background: #fff;
+}
+#salonika-site.team-page .team-leadership .team-person-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#salonika-site.team-page .team-leadership .team-person .team-role {
+  color: var(--navy);
+  font-weight: 600;
+}
+#salonika-site.team-page .team-leadership .team-person h3 {
+  margin: 0;
+  font-size: var(--type-feature) !important;
+  font-weight: 550;
+  line-height: 1.24 !important;
+}
+#salonika-site.team-page .team-content .team-members-label {
+  max-width: none;
+  margin: 0;
+  color: var(--ink);
+  font-size: var(--type-detail) !important;
+  font-weight: 600;
+}
+#salonika-site.team-page .team-members {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 40px;
+}
+#salonika-site.team-page .team-members .team-person { padding-block: 28px; border-bottom: 1px solid var(--line); }
+#salonika-site.team-page .team-management { background: var(--paper); border-block: 1px solid var(--line); }
+#salonika-site.team-page .team-management-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--about-gap); }
+#salonika-site.team-page .team-management-list .team-person { padding-block: 12px; gap: 28px; }
+#salonika-site.team-page .team-management-list .team-portrait { flex-basis: 96px; width: 96px; height: 112px; color: var(--navy); background: #fff; }
+#salonika-site.team-page .team-audit .team-members .team-person { padding-top: 0; }
+#salonika-site.team-page .team-honor {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  margin-bottom: var(--team-space);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--navy);
+}
+#salonika-site.team-page .team-honor-heading .kick { margin-bottom: 12px; color: var(--muted); }
+#salonika-site.team-page .team-honor-heading h2 { margin: 0; }
+#salonika-site.team-page .team-honor .team-person { gap: 28px; }
+#salonika-site.team-page .team-honor .team-portrait {
+  flex: 0 0 132px;
+  width: 132px;
+  height: 154px;
+  color: var(--navy);
+  background: #fff;
+}
+#salonika-site.team-page .team-honor .team-person-copy { display: flex; flex-direction: column; gap: 12px; }
+#salonika-site.team-page .team-honor .team-person .team-role { color: var(--navy); font-weight: 600; }
+#salonika-site.team-page .team-honor .team-person h3 {
+  margin: 0;
+  font-size: var(--type-feature) !important;
+  font-weight: 550;
+  line-height: 1.24 !important;
+}
+#salonika-site.team-page .pop a[aria-current="page"],
+#salonika-site.team-page .m-sub a[aria-current="page"] { color: var(--teal-2); font-weight: 600; text-decoration: underline; text-underline-offset: 5px; }
+@media (width <= 1050px) {
+  #salonika-site.team-page .team-members { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+  #salonika-site.team-page .team-leadership-panel { padding: 24px 28px 32px; }
+  #salonika-site.team-page .team-leadership { gap: 28px; }
+  #salonika-site.team-page .team-leadership .team-person { gap: 22px; }
+  #salonika-site.team-page .team-leadership .team-person + .team-person { padding-inline-start: 28px; }
+  #salonika-site.team-page .team-leadership .team-portrait { flex-basis: 104px; width: 104px; height: 124px; }
+  #salonika-site.team-page .team-honor .team-portrait { flex-basis: 104px; width: 104px; height: 124px; }
+}
+@media (width <= 760px) {
+  #salonika-site.team-page .team-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 24px; }
+  #salonika-site.team-page .team-index a { gap: 8px; }
+  #salonika-site.team-page .team-section-heading { margin-bottom: 24px; }
+  #salonika-site.team-page .team-leadership { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  #salonika-site.team-page .team-leadership .team-person { gap: 24px; }
+  #salonika-site.team-page .team-leadership .team-person + .team-person { padding-inline-start: 0; border-inline-start: 0; padding-top: 28px; border-top: 1px solid var(--line); }
+  #salonika-site.team-page .team-members { column-gap: 24px; }
+  #salonika-site.team-page .team-person { gap: 16px; }
+  #salonika-site.team-page .team-portrait { flex-basis: 60px; width: 60px; height: 72px; }
+  #salonika-site.team-page .team-management-list { gap: 24px; }
+  #salonika-site.team-page .team-management-list .team-person { flex-direction: column; align-items: start; gap: 20px; }
+  #salonika-site.team-page .team-management-list .team-portrait { flex-basis: auto; }
+  #salonika-site.team-page .team-honor { padding: 28px; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
+@media (width <= 560px) {
+  #salonika-site.team-page .team-members,
+  #salonika-site.team-page .team-management-list { grid-template-columns: minmax(0, 1fr); }
+  #salonika-site.team-page .team-management-list .team-person { flex-direction: row; align-items: center; }
+  #salonika-site.team-page .team-management-list .team-portrait { flex: 0 0 76px; width: 76px; height: 90px; }
+  #salonika-site.team-page .team-leadership-panel { padding: 22px 20px 28px; margin-bottom: 32px; }
+  #salonika-site.team-page .team-leadership .team-person { gap: 20px; }
+  #salonika-site.team-page .team-leadership .team-portrait { flex: 0 0 80px; width: 80px; height: 96px; }
+  #salonika-site.team-page .team-honor { padding: 28px 20px; }
+  #salonika-site.team-page .team-honor .team-person { gap: 20px; }
+  #salonika-site.team-page .team-honor .team-portrait { flex-basis: 80px; width: 80px; height: 96px; }
+  #salonika-site.team-page .team-members .team-person { padding-block: 22px; }
+  #salonika-site.team-page .team-audit .team-members .team-person { padding-top: 22px; }
+  #salonika-site.team-page .team-index { column-gap: 16px; }
+}
+@media (width <= 380px) {
+  #salonika-site.team-page .team-leadership .team-person { flex-direction: column; align-items: start; }
+  #salonika-site.team-page .team-leadership .team-portrait { flex-basis: auto; }
+  #salonika-site.team-page .team-honor .team-person { flex-direction: column; align-items: start; }
+  #salonika-site.team-page .team-honor .team-portrait { flex-basis: auto; }
+}

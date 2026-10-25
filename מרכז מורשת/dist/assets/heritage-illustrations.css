@@ -1,0 +1,145 @@
+/* One ink-and-turquoise illustration family, shared with the homepage. */
+#salonika-site.about-page {
+  --heritage-surface: var(--ice, #eef4f4);
+}
+/* Internal-page banners: artwork, a soft blue wash and live text share one surface. */
+#salonika-site.about-page .about-header--illustrated {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(400px, 34vw, 560px);
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
+}
+#salonika-site.about-page .about-header--illustrated .about-header-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #bfd4da;
+  pointer-events: none;
+}
+#salonika-site.about-page .about-header--illustrated .about-header-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+#salonika-site.about-page .about-header--illustrated .about-header-image:after {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(270deg, rgb(10 35 52 / 80%) 0%, rgb(10 35 52 / 68%) 35%, rgb(10 35 52 / 56%) 70%, rgb(10 35 52 / 28%) 100%),
+    linear-gradient(0deg, rgb(10 35 52 / 20%), transparent 55%, rgb(10 35 52 / 12%));
+  pointer-events: none;
+}
+#salonika-site.about-page .about-header--illustrated .about-breadcrumb {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  gap: 6px 12px;
+  padding-block: 20px;
+  color: #e1eff2;
+  border-bottom: 1px solid rgb(255 255 255 / 22%);
+}
+#salonika-site.about-page .about-header--illustrated .about-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: inherit;
+  text-decoration-color: rgb(255 255 255 / 45%);
+}
+#salonika-site.about-page .about-header--illustrated .about-breadcrumb a:hover {
+  color: #fff;
+  text-decoration-color: currentColor;
+}
+#salonika-site.about-page .about-header--illustrated .about-breadcrumb [aria-current] { color: #fff; }
+#salonika-site.about-page .about-header--illustrated .about-breadcrumb [aria-hidden] { color: #b6d0da; }
+#salonika-site.about-page .about-header--illustrated a:focus-visible { outline: 2px solid #b6e8e5; outline-offset: 5px; }
+#salonika-site.about-page .about-header--illustrated .about-header-body {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  padding-block: 40px 56px;
+  background: transparent;
+}
+#salonika-site.about-page .about-header--illustrated .about-header-body:before { display: none; }
+#salonika-site.about-page .about-header--illustrated .about-header-eyebrow { margin-bottom: 18px; }
+#salonika-site.about-page .about-header--illustrated .about-header-caption { color: #edf6f7; }
+#salonika-site.about-page .about-header--illustrated h1 { max-width: 20ch; color: #fff; }
+#salonika-site.about-page .about-header--illustrated h1 em { color: #b6e8e5; }
+#salonika-site .heritage-illustration img,
+#salonika-site .collections-feature-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+#salonika-site .collection-art-window {
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+}
+#salonika-site .collection-art-window:after { display: none; }
+#salonika-site .collection-art-window img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+#salonika-site .collection-art figcaption {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+#salonika-site .collection-art-rule { background: var(--teal-2); }
+/* Documentary photographs use the same quiet framing as homepage photography. */
+#salonika-site.about-page :is(.about-story, .about-community, .founder-mission, .founder-film-mat) {
+  background: var(--heritage-surface);
+}
+#salonika-site.about-page :is(.about-gallery-open, .about-gallery-thumbs a) {
+  background: var(--heritage-surface);
+  border-radius: 0;
+}
+#salonika-site.about-page .about-community figure img { border-radius: 0; }
+#salonika-site.about-page .about-community figure figcaption {
+  padding-block: 14px;
+  border-bottom: 1px solid var(--line);
+}
+@media (width <= 760px) {
+  #salonika-site.about-page .about-header--illustrated { min-height: 360px; }
+  #salonika-site.about-page .about-header--illustrated .about-header-image img { object-position: center 42%; }
+  #salonika-site.about-page .about-header--illustrated .about-header-image:after {
+    background: linear-gradient(180deg, rgb(10 35 52 / 68%), rgb(10 35 52 / 64%) 38%, rgb(10 35 52 / 76%));
+  }
+  #salonika-site.about-page .about-header--illustrated .about-breadcrumb {
+    gap: 4px 10px;
+    padding-block: 12px;
+  }
+  #salonika-site.about-page .about-header--illustrated .about-header-body {
+    padding-block: 36px 44px;
+  }
+  #salonika-site.about-page .about-header--illustrated .about-header-eyebrow { margin-bottom: 14px; }
+  #salonika-site.about-page .about-header--illustrated .about-header-caption { margin-top: 0; }
+  #salonika-site .collection-art { display: block; width: min(100%, 440px); margin-inline: auto; }
+  #salonika-site .collection-art-window { aspect-ratio: auto; }
+  #salonika-site .collection-art figcaption { padding-top: 14px; }
+}
