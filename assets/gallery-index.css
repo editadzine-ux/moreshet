@@ -45,3 +45,5 @@
 #salonika-site.gallery-index-page .gallery-etch{position:absolute;z-index:0;pointer-events:none;left:-38px;bottom:59px;width:155px;height:155px;color:var(--card-ink);opacity:.07;transform:rotate(-8deg)}
 #salonika-site.gallery-index-page .gallery-count{border:1px solid #ffffff80;box-shadow:0 2px 12px #183b4b14;border-radius:3px}
 @media(hover:hover) and (pointer:fine){#salonika-site.gallery-index-page .gallery-card:hover{border-color:var(--card-accent);box-shadow:0 12px 28px #163a4d14}#salonika-site.gallery-index-page .gallery-card:hover .gallery-arrow{background:var(--card-ink);border-color:var(--card-ink);color:var(--card-bg)}}
+
+#salonika-site.gallery-index-page .about-content .gallery-card-description{color:var(--card-body);font-size:16px;line-height:1.6}
