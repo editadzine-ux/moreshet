@@ -42,13 +42,13 @@
 
 #salonika-site.gallery-index-page .about-content .gallery-card-description{color:var(--card-body);font-size:16px;line-height:1.6}
 
-/* Topic buttons share their destination gallery palette and delicate line illustrations. */
-#salonika-site.gallery-index-page .gallery-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-block:14px 32px;align-items:stretch}
-#salonika-site.gallery-index-page .gallery-topics a{display:flex;align-items:center;justify-content:flex-start;gap:12px;min-height:58px;padding:12px 18px;background:var(--card-bg);color:var(--card-ink);border:1px solid var(--card-rule);border-radius:6px;font-size:16px;font-weight:600;line-height:1.4;box-shadow:0 2px 0 #1f4f6608;transition:border-color 180ms ease,box-shadow 180ms ease,transform 180ms var(--ease)}
-#salonika-site.gallery-index-page .topic-icon{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;color:var(--card-accent)}
-#salonika-site.gallery-index-page .topic-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+/* Compact topic links, with small thematic line icons. */
+#salonika-site.gallery-index-page .gallery-topics{display:flex;flex-wrap:wrap;gap:10px;padding-block:14px 32px;align-items:center}
+#salonika-site.gallery-index-page .gallery-topics a{display:inline-flex;flex:0 1 auto;align-items:center;justify-content:center;gap:8px;min-height:46px;max-width:100%;padding:10px 14px;background:#e0eef1;color:var(--navy);border:1px solid #aac8d2;border-radius:8px;font-size:16px;font-weight:600;line-height:1.4;box-shadow:0 2px 0 #1f4f6608;transition:background 180ms ease,border-color 180ms ease,color 180ms ease}
+#salonika-site.gallery-index-page .topic-icon{display:grid;place-items:center;flex:0 0 17px;width:17px;height:17px;color:currentColor;opacity:.75}
+#salonika-site.gallery-index-page .topic-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 #salonika-site.gallery-index-page .gallery-topics a:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
-@media(hover:hover) and (pointer:fine){#salonika-site.gallery-index-page .gallery-topics a:hover{background:var(--card-bg);color:var(--card-ink);border-color:var(--card-accent);box-shadow:0 5px 14px #1f4f6614;transform:translateY(-2px)}}
-#salonika-site.gallery-index-page .gallery-topics a:active{transform:translateY(0);box-shadow:none}
-@media(width <= 600px){#salonika-site.gallery-index-page .gallery-topics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-block:8px 26px}#salonika-site.gallery-index-page .gallery-topics a{min-height:64px;padding:10px 12px;gap:9px;font-size:14px}#salonika-site.gallery-index-page .topic-icon{flex-basis:24px;width:24px;height:24px}}
-@media(prefers-reduced-motion:reduce){#salonika-site.gallery-index-page .gallery-topics a{transition:none;transform:none!important}}
+@media(hover:hover) and (pointer:fine){#salonika-site.gallery-index-page .gallery-topics a:hover{background:var(--navy);color:white;border-color:var(--navy)}}
+#salonika-site.gallery-index-page .gallery-topics a:active{background:#c0e4e0;color:var(--navy);box-shadow:none}
+@media(width <= 600px){#salonika-site.gallery-index-page .gallery-topics{gap:8px;padding-block:8px 26px}#salonika-site.gallery-index-page .gallery-topics a{min-height:44px;padding:9px 11px;gap:6px;font-size:14px}#salonika-site.gallery-index-page .topic-icon{flex-basis:16px;width:16px;height:16px}}
+@media(prefers-reduced-motion:reduce){#salonika-site.gallery-index-page .gallery-topics a{transition:none}}
