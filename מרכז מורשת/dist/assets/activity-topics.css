@@ -32,3 +32,8 @@
 #salonika-site .hub-card:hover{border-color:var(--teal)}
 #salonika-site .hub-card:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
 @media(max-width:700px){#salonika-site .resource-hub .hub-grid{grid-template-columns:1fr}}
+
+#salonika-site #activity #gateway-gallery .activity-subtopics{margin-block:12px}
+#salonika-site #activity #gateway-gallery .activity-subtopics li{padding-block:3px;font-size:14px;line-height:1.5}
+#salonika-site #activity #gateway-gallery .activity-subtopics a{min-height:28px}
+@media(pointer:coarse){#salonika-site #activity #gateway-gallery .activity-subtopics a{min-height:36px}}
