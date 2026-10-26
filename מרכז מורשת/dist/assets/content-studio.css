@@ -7,7 +7,7 @@
 #salonika-site #archive .coll-head h2 em{display:inline!important;color:var(--mist)!important}
 #salonika-site #archive .coll-head>p:last-child{color:var(--line);max-width:30ch;font-size:17px!important}
 #salonika-site #archive .content-accordion{gap:10px;counter-reset:reading-card}
-#salonika-site #archive .content-card{--reading-bg:var(--deep);--reading-ink:var(--paper);--reading-accent:var(--mist);counter-increment:reading-card;position:relative;background:var(--reading-bg);color:var(--reading-ink);border:1px solid color-mix(in srgb, var(--mist) 30.20%, transparent);border-top:3px solid var(--reading-accent);border-radius:4px 4px 12px 4px;box-shadow:0 10px 24px color-mix(in srgb, var(--ink) 12.55%, transparent);min-height:410px}
+#salonika-site #archive .content-card{--reading-bg:var(--deep);--reading-ink:var(--paper);--reading-accent:var(--mist);counter-increment:reading-card;position:relative;background:color-mix(in srgb, var(--reading-bg) 82%, transparent);color:var(--reading-ink);border:1px solid color-mix(in srgb, var(--mist) 30.20%, transparent);border-top:3px solid var(--reading-accent);border-radius:4px 4px 12px 4px;box-shadow:0 10px 24px color-mix(in srgb, var(--ink) 12.55%, transparent);min-height:410px}
 /* Each topic uses a distinct existing homepage color, retained when expanded. */
 #salonika-site #archive .content-card.content-book{--reading-bg:var(--navy)}
 #salonika-site #archive .content-card.content-news{--reading-bg:var(--mist);--reading-ink:var(--ink);--reading-accent:var(--teal-2)}
@@ -15,7 +15,7 @@
 #salonika-site #archive .content-card.content-paper{--reading-bg:var(--parch);--reading-ink:var(--ink);--reading-accent:var(--sand)}
 #salonika-site #archive .content-card.content-film{--reading-bg:var(--deep)}
 #salonika-site #archive .content-card.content-pen{--reading-bg:var(--tint);--reading-ink:var(--ink);--reading-accent:var(--teal-2)}
-#salonika-site #archive .content-card.is-open{background:var(--reading-bg);border-color:var(--reading-accent);box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--mist) 18.82%, transparent),0 16px 28px color-mix(in srgb, var(--ink) 18.82%, transparent)}
+#salonika-site #archive .content-card.is-open{background:color-mix(in srgb, var(--reading-bg) 82%, transparent);border-color:var(--reading-accent);box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--mist) 18.82%, transparent),0 16px 28px color-mix(in srgb, var(--ink) 18.82%, transparent)}
 #salonika-site #archive .content-trigger{padding-top:45px;isolation:isolate}
 #salonika-site #archive .content-trigger::before{content:"0" counter(reading-card);position:absolute;top:17px;inset-inline-start:20px;font:400 11px/1.3 var(--font);color:var(--reading-ink);letter-spacing:.12em}
 #salonika-site #archive .content-trigger::after{content:"";position:absolute;z-index:-1;top:62px;left:50%;width:106px;height:142px;transform:translateX(-50%) rotate(-6deg);border:1px solid color-mix(in srgb, var(--reading-ink) 16.86%, transparent);border-radius:70px 70px 0 0;background:color-mix(in srgb, var(--reading-ink) 3.14%, transparent);pointer-events:none}
