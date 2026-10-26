@@ -7,19 +7,24 @@
 #salonika-site #archive .coll-head h2 em{display:inline!important;color:var(--mist)!important}
 #salonika-site #archive .coll-head>p:last-child{color:var(--line);max-width:30ch;font-size:17px!important}
 #salonika-site #archive .content-accordion{gap:10px;counter-reset:reading-card}
-#salonika-site #archive .content-card{--reading-bg:var(--deep);--reading-ink:var(--paper);counter-increment:reading-card;position:relative;background:var(--reading-bg);color:var(--reading-ink);border:1px solid color-mix(in srgb, var(--mist) 30.20%, transparent);border-top:3px solid var(--mist);border-radius:4px 4px 12px 4px;box-shadow:0 10px 24px color-mix(in srgb, var(--ink) 12.55%, transparent);min-height:410px}
-#salonika-site #archive .content-card:nth-child(3n+2){--reading-bg:var(--navy);border-top-color:var(--mist)}
-#salonika-site #archive .content-card:nth-child(3n){--reading-bg:var(--muted);border-top-color:var(--sand)}
-#salonika-site #archive .content-card.is-open{background:var(--reading-bg);border-color:var(--mist);box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--mist) 18.82%, transparent),0 16px 28px color-mix(in srgb, var(--ink) 18.82%, transparent)}
+#salonika-site #archive .content-card{--reading-bg:var(--deep);--reading-ink:var(--paper);--reading-accent:var(--mist);counter-increment:reading-card;position:relative;background:var(--reading-bg);color:var(--reading-ink);border:1px solid color-mix(in srgb, var(--mist) 30.20%, transparent);border-top:3px solid var(--reading-accent);border-radius:4px 4px 12px 4px;box-shadow:0 10px 24px color-mix(in srgb, var(--ink) 12.55%, transparent);min-height:410px}
+/* Each topic uses a distinct existing homepage color, retained when expanded. */
+#salonika-site #archive .content-card.content-book{--reading-bg:var(--navy)}
+#salonika-site #archive .content-card.content-news{--reading-bg:var(--mist);--reading-ink:var(--ink);--reading-accent:var(--teal-2)}
+#salonika-site #archive .content-card.content-disc{--reading-bg:var(--teal-2)}
+#salonika-site #archive .content-card.content-paper{--reading-bg:var(--parch);--reading-ink:var(--ink);--reading-accent:var(--sand)}
+#salonika-site #archive .content-card.content-film{--reading-bg:var(--deep)}
+#salonika-site #archive .content-card.content-pen{--reading-bg:var(--tint);--reading-ink:var(--ink);--reading-accent:var(--teal-2)}
+#salonika-site #archive .content-card.is-open{background:var(--reading-bg);border-color:var(--reading-accent);box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--mist) 18.82%, transparent),0 16px 28px color-mix(in srgb, var(--ink) 18.82%, transparent)}
 #salonika-site #archive .content-trigger{padding-top:45px;isolation:isolate}
-#salonika-site #archive .content-trigger::before{content:"0" counter(reading-card);position:absolute;top:17px;inset-inline-start:20px;font:400 11px/1.3 var(--font);color:var(--line);letter-spacing:.12em}
-#salonika-site #archive .content-trigger::after{content:"";position:absolute;z-index:-1;top:62px;left:50%;width:106px;height:142px;transform:translateX(-50%) rotate(-6deg);border:1px solid color-mix(in srgb, var(--line) 16.86%, transparent);border-radius:70px 70px 0 0;background:color-mix(in srgb, var(--tint) 3.14%, transparent);pointer-events:none}
+#salonika-site #archive .content-trigger::before{content:"0" counter(reading-card);position:absolute;top:17px;inset-inline-start:20px;font:400 11px/1.3 var(--font);color:var(--reading-ink);letter-spacing:.12em}
+#salonika-site #archive .content-trigger::after{content:"";position:absolute;z-index:-1;top:62px;left:50%;width:106px;height:142px;transform:translateX(-50%) rotate(-6deg);border:1px solid color-mix(in srgb, var(--reading-ink) 16.86%, transparent);border-radius:70px 70px 0 0;background:color-mix(in srgb, var(--reading-ink) 3.14%, transparent);pointer-events:none}
 #salonika-site #archive .content-icon{height:160px}
 #salonika-site #archive .content-icon img{width:112px;filter:drop-shadow(0 5px 6px color-mix(in srgb, var(--ink) 12.55%, transparent))}
-#salonika-site #archive .content-title{font-size:1.35rem;color:var(--paper)}
-#salonika-site #archive .content-toggle{top:228px;color:var(--line);font-size:22px}
-#salonika-site #archive .content-body p{color:var(--tint)!important;font-size:15px!important}
-#salonika-site #archive .content-link{color:var(--tint);border-top-color:color-mix(in srgb, var(--line) 32.16%, transparent);font-size:14px}
+#salonika-site #archive .content-title{font-size:1.35rem;color:var(--reading-ink)}
+#salonika-site #archive .content-toggle{top:228px;color:var(--reading-ink);font-size:22px}
+#salonika-site #archive .content-body p{color:var(--reading-ink)!important;font-size:15px!important}
+#salonika-site #archive .content-link{color:var(--reading-ink);border-top-color:color-mix(in srgb, var(--reading-ink) 32.16%, transparent);font-size:14px}
 #salonika-site #archive .collections-feature{position:relative;isolation:isolate;margin-top:64px;padding:42px clamp(24px,4vw,54px);border:1px solid var(--mist);border-radius:4px;background:var(--tint);color:var(--navy);box-shadow:0 20px 40px color-mix(in srgb, var(--ink) 14.12%, transparent)}
 #salonika-site #archive .collections-feature::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:0;background:linear-gradient(115deg,color-mix(in srgb, var(--parch) 73.33%, transparent),transparent 65%),repeating-linear-gradient(0deg,transparent 0,transparent 35px,color-mix(in srgb, var(--navy) 2.35%, transparent) 35px,color-mix(in srgb, var(--navy) 2.35%, transparent) 36px)}
 #salonika-site #archive .collections-feature-header{position:relative;gap:10px 26px;grid-template-columns:1fr 1.2fr;color:var(--navy);padding-bottom:30px;border-bottom:1px solid var(--mist)}
@@ -53,7 +58,7 @@
  #salonika-site #archive .content-icon{width:48px;height:58px}
  #salonika-site #archive .content-icon img{width:100%;height:100%}
  #salonika-site #archive .content-title{font-size:20px}
- #salonika-site #archive .content-toggle{position:static;border-color:color-mix(in srgb, var(--mist) 37.65%, transparent)}
+ #salonika-site #archive .content-toggle{position:static;border-color:color-mix(in srgb, var(--reading-ink) 37.65%, transparent)}
  #salonika-site #archive .collection-panel-art img{width:80px}
 }
 @media(max-width:700px){
