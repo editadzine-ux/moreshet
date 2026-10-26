@@ -138,20 +138,18 @@
  #salonika-site #archive .collection-panel .collection-panel-art img{width:70px;height:70px}
  #salonika-site #archive .collection-panel-title{font-size:20px}
 }
-/* A luminous blue-grey archive chapter, softly joined to the reading room. */
-#salonika-site #archive .collections-feature{padding-top:76px;color:var(--navy)}
-#salonika-site #archive .collections-feature::before{inset:-38px calc((100% - 100vw)/2) -80px;background:linear-gradient(180deg,#153f52 0,#608e9a 65px,#a4c5c9 150px,#bbd2d1 100%)}
-#salonika-site #archive .collections-feature-header{border-top:0;border-bottom-color:#547e8955;padding-top:26px}
-#salonika-site #archive .collections-feature h2{color:#173f53!important;font-weight:600!important}
-#salonika-site #archive .collections-feature-copy p{color:#284f5e!important}
-#salonika-site #archive .collections-feature .collection-soon--prominent{background:#dfebe16b;border-color:#638f94;border-inline-start-color:#276e72;color:#214f5b}
-#salonika-site #archive .collections-feature-all{color:#214f62;border-color:#527f89}
-#salonika-site #archive .collections-feature-art::before{background:#d3e4df42;border-color:#527f8938}
-#salonika-site #archive .collections-explorer-help{color:#315c68}
-#salonika-site #archive .collection-panel{background:#d0e2df;border-color:#80a7ad;border-top-color:#438c8b}
-#salonika-site #archive .collection-panel:nth-child(2){background:#e2e1ce;border-color:#a7b5a7;border-top-color:#9eaa87}
-#salonika-site #archive .collection-panel:nth-child(3){background:#cddfe7;border-color:#8daebc;border-top-color:#57869c}
-#salonika-site #archive .collection-panel.is-open{background:#e2ede7}
-#salonika-site #archive .collection-panel:nth-child(2).is-open{background:#eae9db}
-#salonika-site #archive .collection-panel:nth-child(3).is-open{background:#deebef}
-@media(max-width:700px){#salonika-site #archive .collections-feature{padding-top:62px}#salonika-site #archive .collections-feature::before{inset:-24px calc((100% - 100vw)/2) -48px;background:linear-gradient(180deg,#153f52 0,#7ca3ad 54px,#a4c5c9 125px,#bbd2d1 100%)}}
+/* Flat homepage brand colors; no gradient between the content and collections. */
+#salonika-site #archive .collections-feature{padding-top:32px;color:var(--navy)}
+#salonika-site #archive .collections-feature::before{inset:-24px calc((100% - 100vw)/2) -80px;background:var(--tint,#e6f1ef);border-top:1px solid #c0e4e0}
+#salonika-site #archive .collections-feature-header{border-top:0;border-bottom-color:#b9d2d0;padding-top:12px}
+#salonika-site #archive .collections-feature h2{color:var(--navy)!important;font-weight:600!important}
+#salonika-site #archive .collections-feature-copy p{color:#315f6d!important}
+#salonika-site #archive .collections-feature .collection-soon--prominent{background:var(--mist,#c0e4e0);border-color:#99c5bf;border-inline-start-color:var(--teal-2);color:var(--navy)}
+#salonika-site #archive .collections-feature-all{color:var(--navy);border-color:#7fa7ab}
+#salonika-site #archive .collections-feature-art::before{background:transparent;border-color:#a7ccc64d}
+#salonika-site #archive .collections-explorer-help{color:#456d76}
+#salonika-site #archive .collection-panel{background:var(--mist,#c0e4e0);border-color:#9fc5c1;border-top-color:var(--teal-2);box-shadow:none}
+#salonika-site #archive .collection-panel:nth-child(2){background:var(--parch,#f5efe4);border-color:#d5cebc;border-top-color:#b6ac91}
+#salonika-site #archive .collection-panel:nth-child(3){background:#dcebf0;border-color:#b6cdd6;border-top-color:#789aaf}
+#salonika-site #archive .collection-panel.is-open,#salonika-site #archive .collection-panel:nth-child(2).is-open,#salonika-site #archive .collection-panel:nth-child(3).is-open{background:var(--paper,#f3f7f6)}
+@media(max-width:700px){#salonika-site #archive .collections-feature{padding-top:26px}#salonika-site #archive .collections-feature::before{inset:-18px calc((100% - 100vw)/2) -48px;background:var(--tint,#e6f1ef)}}
