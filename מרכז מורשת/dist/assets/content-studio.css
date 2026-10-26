@@ -69,3 +69,35 @@
  #salonika-site #archive .collections-topic-links{grid-template-columns:1fr}
  #salonika-site #archive .collections-topic-links a{min-height:60px;flex-direction:row;align-items:center;gap:12px}
 }
+/* Let the archive emerge from the reading room, without a separate white container. */
+#salonika-site #archive .collections-feature{margin-top:60px;padding:40px 0 8px;background:transparent;border:0;border-radius:0;box-shadow:none;color:#e8f2ef}
+#salonika-site #archive .collections-feature::before{inset:-48px -64px -72px;background:linear-gradient(180deg,#153f5200 0%,#214a5970 18%,#315865b8 65%,#31586580 100%);border-radius:0}
+#salonika-site #archive .collections-feature-header{padding:28px 18px 32px;border-top:1px solid #93b6bb55;border-bottom:1px solid #93b6bb40;gap:12px 42px}
+#salonika-site #archive .collections-feature h2{color:#c5e5df!important;font-weight:500!important}
+#salonika-site #archive .collections-feature-copy p{color:#d0e0e3!important}
+#salonika-site #archive .collections-feature .collection-soon--prominent{background:#a7cec914;border:1px solid #8eb8b770;border-inline-start:3px solid #a7cec9;color:#cde4de;font-size:12px}
+#salonika-site #archive .collections-feature-all{color:#edf4ef;border-color:#8eb5b9}
+#salonika-site #archive .collections-feature-art::before{inset:8% 4%;border-color:#94bab83d;background:radial-gradient(ellipse,#8dbdb324,transparent 70%);border-radius:50% 50% 3px 3px}
+#salonika-site #archive .collections-feature-art img{filter:drop-shadow(0 14px 14px #081e292e)}
+#salonika-site #archive .collections-explorer-help{color:#bed4d8;margin:26px 0 18px;padding-inline:18px}
+#salonika-site #archive .collections-explorer{gap:14px}
+#salonika-site #archive .collection-panel{background:#adc8c9;border-color:#b5d0d080;border-top-color:#75aaa7;box-shadow:0 8px 20px #102f3e18}
+#salonika-site #archive .collection-panel:nth-child(2){background:#c4c8b9;border-color:#ced0bc80;border-top-color:#a8ad93}
+#salonika-site #archive .collection-panel:nth-child(3){background:#a9c3d1;border-color:#bcd2dd80;border-top-color:#7ca4b8}
+#salonika-site #archive .collection-panel.is-open{background:#ccdcda;border-color:#a7ceca}
+#salonika-site #archive .collection-panel:nth-child(2).is-open{background:#d5d8ca}
+#salonika-site #archive .collection-panel:nth-child(3).is-open{background:#c4d6df}
+#salonika-site #archive .collection-panel-count{color:#3d606b}
+#salonika-site #archive .collection-panel-bottom{border-color:#628b9466;color:#245765}
+#salonika-site #archive .collections-topic-links a{border-color:#8cacae88}
+#salonika-site #archive .collections-topic-meta{color:#315e66}
+#salonika-site #archive .collections-topic-meta>span:first-child{background:#e5eeea50;border-color:#8aacab}
+#salonika-site #archive .collection-panel-close{background:#e2eeea38;border-color:#84a5ac;color:#214f62}
+#salonika-site #archive .collection-panel-art img{filter:brightness(.38) saturate(.9)}
+@media(max-width:700px){
+ #salonika-site #archive .collections-feature{margin-top:34px;padding:24px 0 4px}
+ #salonika-site #archive .collections-feature::before{inset:-24px -22px -44px}
+ #salonika-site #archive .collections-feature-header{padding:24px 4px;gap:18px}
+ #salonika-site #archive .collections-explorer-help{padding-inline:4px}
+ #salonika-site #archive .collections-feature-art{max-width:440px}
+}
