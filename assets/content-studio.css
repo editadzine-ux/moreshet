@@ -101,3 +101,57 @@
  #salonika-site #archive .collections-explorer-help{padding-inline:4px}
  #salonika-site #archive .collections-feature-art{max-width:440px}
 }
+/* Compact illustrated collection labels: horizontal on desktop, stacked on mobile. */
+#salonika-site #archive .collections-explorer.is-enhanced{align-items:flex-start}
+#salonika-site #archive .collections-explorer .collection-panel{min-height:0;align-self:flex-start;overflow:hidden;border-radius:4px;box-shadow:0 6px 16px #102f3e12}
+#salonika-site #archive .collection-panel-heading{display:block;flex:none}
+#salonika-site #archive .collection-panel .collection-panel-trigger{display:grid;grid-template-columns:80px minmax(0,1fr);grid-template-rows:auto auto;gap:10px 16px;align-items:center;min-height:158px;padding:22px 18px;flex:none}
+#salonika-site #archive .collection-panel .collection-panel-art{grid-column:1;grid-row:1 / span 2;align-self:center;display:grid;place-items:center;width:80px;height:88px;position:relative;isolation:isolate}
+#salonika-site #archive .collection-panel-art::before{content:"";position:absolute;inset:1px -3px;background:#f7f5ea60;border:1px solid #f9faf070;border-radius:48px 48px 7px 7px;z-index:-1;transform:rotate(-5deg)}
+#salonika-site #archive .collection-panel .collection-panel-art img{width:80px;height:80px;object-fit:contain;filter:none;opacity:1}
+#salonika-site #archive .collection-panel .collection-panel-labels{grid-column:2;grid-row:1;margin-top:0;gap:7px;align-self:end}
+#salonika-site #archive .collection-panel-title{font-size:20px;line-height:1.3;font-weight:600}
+#salonika-site #archive .collection-panel-count{font-size:12px;color:#3d606b}
+#salonika-site #archive .collection-panel .collection-panel-bottom{grid-column:2;grid-row:2;align-self:start;min-height:32px;padding-top:8px;font-size:12px;gap:8px}
+#salonika-site #archive .collection-panel-toggle{font-size:21px}
+#salonika-site #archive .collection-panel.is-open .collection-panel-trigger{min-height:126px;grid-template-rows:auto;padding-bottom:18px}
+#salonika-site #archive .collection-panel.is-open .collection-panel-art{grid-row:1}
+#salonika-site #archive .collection-panel.is-open .collection-panel-labels{align-self:center}
+#salonika-site #archive .collection-panel.is-open .collection-panel-bottom{display:none}
+#salonika-site #archive .collection-panel-content{padding:0 20px 20px}
+#salonika-site #archive .collections-topic-links a{min-height:62px;padding-block:10px;gap:5px}
+#salonika-site #archive .collections-topic-name{font-size:16px}
+#salonika-site #archive .collection-panel-close{margin-top:14px}
+@media(min-width:901px){
+ #salonika-site #archive .collections-explorer.is-enhanced .collection-panel{flex:1 1 0;min-width:0}
+ #salonika-site #archive .collections-explorer.is-enhanced .collection-panel.is-open{flex-grow:2.3}
+ #salonika-site #archive .collections-explorer:has(.is-open) .collection-panel:not(.is-open) .collection-panel-trigger{grid-template-columns:1fr;gap:12px;padding:20px 16px;min-height:210px}
+ #salonika-site #archive .collections-explorer:has(.is-open) .collection-panel:not(.is-open) .collection-panel-art{grid-row:1;grid-column:1;justify-self:start;width:62px;height:66px}
+ #salonika-site #archive .collections-explorer:has(.is-open) .collection-panel:not(.is-open) .collection-panel-art img{width:62px;height:62px}
+ #salonika-site #archive .collections-explorer:has(.is-open) .collection-panel:not(.is-open) .collection-panel-labels{grid-row:2;grid-column:1}
+ #salonika-site #archive .collections-explorer:has(.is-open) .collection-panel:not(.is-open) .collection-panel-bottom{grid-row:3;grid-column:1}
+}
+@media(max-width:900px){
+ #salonika-site #archive .collections-explorer .collection-panel{width:100%}
+ #salonika-site #archive .collection-panel .collection-panel-trigger{min-height:128px;padding:18px;grid-template-columns:70px minmax(0,1fr)}
+ #salonika-site #archive .collection-panel .collection-panel-art{width:70px;height:80px}
+ #salonika-site #archive .collection-panel .collection-panel-art img{width:70px;height:70px}
+ #salonika-site #archive .collection-panel-title{font-size:20px}
+}
+/* A luminous blue-grey archive chapter, softly joined to the reading room. */
+#salonika-site #archive .collections-feature{padding-top:76px;color:var(--navy)}
+#salonika-site #archive .collections-feature::before{inset:-38px calc((100% - 100vw)/2) -80px;background:linear-gradient(180deg,#153f52 0,#608e9a 65px,#a4c5c9 150px,#bbd2d1 100%)}
+#salonika-site #archive .collections-feature-header{border-top:0;border-bottom-color:#547e8955;padding-top:26px}
+#salonika-site #archive .collections-feature h2{color:#173f53!important;font-weight:600!important}
+#salonika-site #archive .collections-feature-copy p{color:#284f5e!important}
+#salonika-site #archive .collections-feature .collection-soon--prominent{background:#dfebe16b;border-color:#638f94;border-inline-start-color:#276e72;color:#214f5b}
+#salonika-site #archive .collections-feature-all{color:#214f62;border-color:#527f89}
+#salonika-site #archive .collections-feature-art::before{background:#d3e4df42;border-color:#527f8938}
+#salonika-site #archive .collections-explorer-help{color:#315c68}
+#salonika-site #archive .collection-panel{background:#d0e2df;border-color:#80a7ad;border-top-color:#438c8b}
+#salonika-site #archive .collection-panel:nth-child(2){background:#e2e1ce;border-color:#a7b5a7;border-top-color:#9eaa87}
+#salonika-site #archive .collection-panel:nth-child(3){background:#cddfe7;border-color:#8daebc;border-top-color:#57869c}
+#salonika-site #archive .collection-panel.is-open{background:#e2ede7}
+#salonika-site #archive .collection-panel:nth-child(2).is-open{background:#eae9db}
+#salonika-site #archive .collection-panel:nth-child(3).is-open{background:#deebef}
+@media(max-width:700px){#salonika-site #archive .collections-feature{padding-top:62px}#salonika-site #archive .collections-feature::before{inset:-24px calc((100% - 100vw)/2) -48px;background:linear-gradient(180deg,#153f52 0,#7ca3ad 54px,#a4c5c9 125px,#bbd2d1 100%)}}
