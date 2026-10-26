@@ -91,3 +91,31 @@
  #salonika-site .resource-gateway .resource-icon{width:34px;height:34px}
 }
 @media(prefers-reduced-motion:reduce){#salonika-site .resource-editorial .icon-drawing,#salonika-site .resource-row-arrow,#salonika-site .resource-gateway-arrow{transition:none!important;transform:none!important}}
+/* Heritage marginalia: an original line-drawn city, archive folios and a library arch. */
+#salonika-site .resource-editorial{position:relative;isolation:isolate;background-color:#fbfcfa;background-image:repeating-linear-gradient(90deg,transparent 0,transparent 159px,#1f4f6605 159px,#1f4f6605 160px)}
+#salonika-site .resource-welcome{position:relative;isolation:isolate;padding-bottom:112px}
+#salonika-site .resource-welcome::after{content:"";position:absolute;z-index:-1;pointer-events:none;left:-35px;bottom:-18px;width:min(720px,68%);height:190px;background:url('/moreshet/assets/illustrations/resource-city-lines.svg') left bottom/contain no-repeat;opacity:.17;mask-image:linear-gradient(to right,#000 40%,transparent 100%)}
+#salonika-site .resource-archives{position:relative;isolation:isolate}
+#salonika-site .resource-archives::before{content:"";position:absolute;pointer-events:none;top:145px;bottom:80px;right:-18px;width:1px;background:#aac8ce}
+#salonika-site .resource-band{position:relative;isolation:isolate}
+#salonika-site .resource-band::before{content:"";position:absolute;pointer-events:none;right:-22px;top:52px;width:8px;height:8px;border:1px solid #81a9af;background:#fbfcfa;transform:rotate(45deg)}
+#salonika-site .resource-band-intro{isolation:isolate}
+#salonika-site .resource-band-intro::after{content:"";position:absolute;z-index:-1;pointer-events:none;width:240px;height:260px;left:-85px;bottom:-58px;background:url('/moreshet/assets/illustrations/resource-folio-lines.svg') center/contain no-repeat;opacity:.11;transform:rotate(7deg)}
+#salonika-site .band-tradition .resource-band-intro::after{background-image:url('/moreshet/assets/illustrations/resource-city-lines.svg');width:430px;height:175px;left:-230px;bottom:-20px;opacity:.13;transform:none}
+#salonika-site .band-people .resource-band-intro::after{background-image:url('/moreshet/assets/illustrations/resource-city-lines.svg');background-size:auto 230px;background-position:left bottom;width:190px;height:250px;left:-50px;bottom:-30px;opacity:.12;transform:none}
+#salonika-site .resource-library-section{position:relative;isolation:isolate;overflow:hidden;background:#193f53}
+#salonika-site .resource-library-section::before{content:"";position:absolute;z-index:-1;pointer-events:none;width:560px;height:510px;left:-115px;top:-50px;background:url('/moreshet/assets/illustrations/resource-arch-lines.svg') center/contain no-repeat;opacity:.19;transform:rotate(-7deg)}
+#salonika-site .resource-library-section::after{content:"";position:absolute;z-index:-1;pointer-events:none;inset:0;background:linear-gradient(90deg,transparent,#193f5380 35%,#193f53 65%)}
+#salonika-site .resource-library-section .wrap{position:relative}
+#salonika-site .resource-library-section .resource-library-card{border-top-color:#66859380}
+#salonika-site .resource-gateways{position:relative;isolation:isolate;padding-bottom:120px}
+#salonika-site .resource-gateways::after{content:"";position:absolute;z-index:-1;pointer-events:none;bottom:-5px;left:-50px;width:min(760px,80%);height:250px;background:url('/moreshet/assets/illustrations/resource-city-lines.svg') left bottom/contain no-repeat;opacity:.12;mask-image:linear-gradient(to top,#000 10%,transparent 80%)}
+@media(max-width:600px){
+ #salonika-site .resource-welcome{padding-bottom:95px}
+ #salonika-site .resource-welcome::after{left:-12px;bottom:-6px;width:100%;height:110px;opacity:.18;mask-image:linear-gradient(to top,#000,transparent)}
+ #salonika-site .resource-archives::before,#salonika-site .resource-band::before{display:none}
+ #salonika-site .resource-band-intro::after{left:-65px;width:200px;height:210px;opacity:.09}
+ #salonika-site .resource-library-section::before{width:380px;height:420px;left:-150px;top:20px;opacity:.14}
+ #salonika-site .resource-gateways{padding-bottom:100px}
+ #salonika-site .resource-gateways::after{width:100%;height:130px;left:0;opacity:.16}
+}
