@@ -1,0 +1,35 @@
+/* Sharon review, 1 November 2026, item 1. Loaded only by the homepage. */
+#salonika-site{--type-body:1.125rem;--type-detail:1.125rem;--type-label:1rem}
+#salonika-site p,
+#salonika-site #activity .ac p,
+#salonika-site #archive .content-body p,
+#salonika-site #archive .coll-head>p:last-child,
+#salonika-site #archive .collections-feature-copy p,
+#salonika-site #resources .door-copy em{font-size:1.125rem!important;line-height:1.75!important}
+#salonika-site :is(.btn,.links a,.door-foot,.ticket .meta,.contact input,.contact textarea,.contact button){font-size:1.125rem}
+#salonika-site #activity .activity-group .more,
+#salonika-site #activity .ac .more,
+#salonika-site #activity .activity-topics-toggle,
+#salonika-site #activity .activity-subtopics li,
+#salonika-site #activity #gateway-gallery .activity-subtopics li,
+#salonika-site #archive .content-link,
+#salonika-site #archive .collections-feature-all,
+#salonika-site #archive .collections-explorer-help,
+#salonika-site #archive .collection-panel-count,
+#salonika-site #archive .collection-panel .collection-panel-bottom,
+#salonika-site #archive .collection-panel-close,
+#salonika-site #archive .collections-topic-meta,
+#salonika-site #archive .content-eyebrow,
+#salonika-site #archive .collections-feature .collection-soon--prominent,
+#salonika-site #resources .door-foot{font-size:1rem!important;line-height:1.6}
+#salonika-site #archive .collections-topic-name{font-size:1.125rem;line-height:1.5}
+#salonika-site #activity .activity-subtopics a{min-height:36px}
+#salonika-site #activity .activity-links{gap:12px;flex-wrap:wrap}
+#salonika-site #archive .collection-panel-trigger{min-height:176px}
+#salonika-site #archive .collection-panel.is-open .collection-panel-trigger{min-height:142px}
+#salonika-site #archive .collection-panel .collection-panel-bottom{min-height:40px}
+#salonika-site .contact :is(input,textarea,button){font-size:1.125rem;line-height:1.5}
+@media(max-width:700px){
+ #salonika-site #archive .collection-panel-trigger,
+ #salonika-site #archive .collection-panel.is-open .collection-panel-trigger{min-height:144px}
+}
