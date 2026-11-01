@@ -1,6 +1,9 @@
 (() => {
   const film = document.querySelector('.film');
   const video = film?.querySelector('video');
+  const music = film?.querySelector('[data-film-music]');
+  let soundEnabled = false;
+  let musicStarting = false;
   const seek = film?.querySelector('#seek');
   const bar = film?.querySelector('.film-bar');
   if (!video || !seek || !bar) return;
@@ -45,10 +48,10 @@
     const current = Math.min(total, previewTime ?? (video.currentTime || 0));
     bar.querySelector('[data-s="playing"]').classList.toggle('off', video.paused);
     bar.querySelector('[data-s="paused"]').classList.toggle('off', !video.paused);
-    bar.querySelector('[data-s="muted"]').classList.toggle('off', !video.muted);
-    bar.querySelector('[data-s="sound"]').classList.toggle('off', video.muted);
+    bar.querySelector('[data-s="muted"]').classList.toggle('off', soundEnabled);
+    bar.querySelector('[data-s="sound"]').classList.toggle('off', !soundEnabled);
     play.setAttribute('aria-label', video.paused ? 'ניגון הסרט' : 'השהיית הסרט');
-    mute.setAttribute('aria-label', video.muted ? 'הפעלת קול' : 'השתקת קול');
+    mute.setAttribute('aria-label', !soundEnabled ? 'הפעלת קול' : 'השתקת קול');
     play.title = play.getAttribute('aria-label');
     mute.title = mute.getAttribute('aria-label');
     seek.disabled = back.disabled = forward.disabled = !total;
@@ -58,9 +61,40 @@
     seek.setAttribute('aria-valuetext', `${format(current)} מתוך ${format(total)}`);
     time.textContent = `${format(current)} / ${format(total)}`;
   }
+  // The original video track stays muted on desktop and iOS alike.
+  // This soundtrack follows the same transport, seek and loop controls.
+  function alignMusic() {
+    if (music && music.readyState && Math.abs(music.currentTime - video.currentTime) > .35) {
+      music.currentTime = Math.min(video.currentTime, music.duration || video.currentTime);
+    }
+  }
+  function playMusic() {
+    if (!music || !soundEnabled || video.paused || video.ended || video.seeking) return;
+    alignMusic();
+    if (!music.paused || musicStarting) return;
+    musicStarting = true;
+    const attempt = music.play();
+    if (attempt?.then) attempt.catch(() => {
+      if (soundEnabled && !video.paused && !video.seeking) {
+        soundEnabled = false;
+        sync();
+      }
+    }).finally(() => { musicStarting = false; });
+    else musicStarting = false;
+  }
+  if (music) {
+    video.muted = true;
+    video.addEventListener('volumechange', () => { if (!video.muted) video.muted = true; });
+    ['pause', 'waiting', 'seeking', 'emptied', 'ended'].forEach(event => video.addEventListener(event, () => music.pause()));
+    ['playing', 'seeked'].forEach(event => video.addEventListener(event, () => { alignMusic(); playMusic(); }));
+    video.addEventListener('timeupdate', alignMusic);
+    video.addEventListener('ratechange', () => { music.playbackRate = video.playbackRate; });
+    music.addEventListener('loadedmetadata', alignMusic);
+  }
   function start() {
     const attempt = video.play();
-    if (attempt?.catch) attempt.catch(sync);
+    if (attempt?.catch) attempt.catch(() => { music?.pause(); sync(); });
+    playMusic();
   }
   function seekTo(target) {
     const total = duration();
@@ -71,7 +105,12 @@
     sync();
   }
   play.addEventListener('click', () => video.paused ? start() : video.pause());
-  mute.addEventListener('click', () => { video.muted = !video.muted; });
+  mute.addEventListener('click', () => {
+    soundEnabled = !soundEnabled;
+    if (soundEnabled) playMusic();
+    else music?.pause();
+    sync();
+  });
   back.addEventListener('click', () => seekTo(video.currentTime - 10));
   forward.addEventListener('click', () => seekTo(video.currentTime + 10));
   // Touch dragging previews a timestamp, then commits one seek on release.
