@@ -15,5 +15,5 @@
 #salonika-site #gateway-gallery .ph img{object-fit:cover!important;object-position:center;width:100%;height:100%;padding:0;border:0}
 /* Library gate: a restrained monochrome treatment in the site's existing palette. */
 #salonika-site #resource-library .gate-art{position:relative;isolation:isolate;overflow:hidden;background:var(--parch)}
-#salonika-site #resource-library .gate-art img{filter:grayscale(1);mix-blend-mode:multiply;opacity:.94}
-#salonika-site #resource-library .gate-art::after{content:"";position:absolute;inset:0;background:var(--copper);opacity:.12;pointer-events:none}
+#salonika-site #resource-library .gate-art img{filter:grayscale(1);mix-blend-mode:multiply;opacity:.58}
+#salonika-site #resource-library .gate-art::after{content:"";position:absolute;inset:0;background:var(--copper);opacity:.28;pointer-events:none}
