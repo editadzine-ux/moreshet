@@ -1,0 +1,27 @@
+/* A real archive portrait and live, accessible biography text. */
+#salonika-site.x .about-art.leon-card{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;height:auto;min-height:590px;padding:40px 30px;background:var(--tint);border:1px solid var(--mist);color:var(--ink);text-align:center;text-decoration:none;overflow:hidden}
+#salonika-site .leon-card::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/moreshet/assets/illustrations/header-founder-salonika.webp') center bottom/auto 70% no-repeat;opacity:.13}
+#salonika-site .leon-card>img{display:block;width:240px;max-width:70%;height:auto;object-fit:contain;border:8px solid var(--parch);box-shadow:0 12px 32px color-mix(in srgb,var(--ink) 14%,transparent)}
+#salonika-site .leon-card-copy{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:34ch}
+#salonika-site .leon-card-copy strong{font:500 clamp(26px,2.4vw,36px)/1.25 var(--display)}
+#salonika-site .leon-years{font-size:16px;color:var(--muted)}
+#salonika-site .leon-role{font-size:18px;line-height:1.6}
+#salonika-site .leon-card-action{display:flex;gap:28px;align-items:center;font-size:17px;font-weight:600;color:var(--teal-2);border-bottom:1px solid currentColor;padding:12px 0 5px}
+#salonika-site .leon-card:focus-visible{outline:3px solid var(--teal-2);outline-offset:5px}
+@media(hover:hover){#salonika-site .leon-card:hover .leon-card-action{color:var(--navy)}}
+#salonika-site .leon-biography{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.6fr);gap:clamp(32px,5vw,80px);align-items:start;padding-block:64px}
+#salonika-site .leon-portrait figure{margin:0;padding:20px;background:var(--parch);border:1px solid var(--line)}
+#salonika-site .leon-portrait img{display:block;width:100%;height:auto;object-fit:contain}
+#salonika-site .leon-portrait figcaption{display:flex;flex-direction:column;gap:8px;padding-top:20px;text-align:center;color:var(--navy)}
+#salonika-site .leon-portrait figcaption strong{font:600 24px/1.3 var(--display)}
+#salonika-site .leon-portrait figcaption p{margin:0;font-size:17px!important}
+#salonika-site .leon-photo-credit{font-size:13px!important;line-height:1.6!important;color:var(--muted);margin-top:14px}
+#salonika-site .leon-photo-credit a,#salonika-site .leon-source a{text-decoration:underline;text-underline-offset:3px}
+#salonika-site .leon-story section+section{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+#salonika-site .leon-story h2{font-size:clamp(28px,3vw,38px)!important}
+#salonika-site .leon-story h2 em{display:inline!important;color:var(--teal-2)}
+#salonika-site .leon-story p{font-size:18px!important;line-height:1.85!important}
+#salonika-site .leon-remembrance{background:var(--tint);padding:24px!important}
+#salonika-site .leon-source{margin-top:32px;color:var(--muted)}
+#salonika-site .leon-source p{font-size:15px!important}
+@media(max-width:700px){#salonika-site.x .about-art.leon-card{min-height:0;padding:30px 22px}#salonika-site .leon-biography{grid-template-columns:1fr;padding-block:32px;gap:32px}#salonika-site .leon-portrait{max-width:360px;margin-inline:auto}#salonika-site .leon-card>img{width:200px}}
