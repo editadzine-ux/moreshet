@@ -3,7 +3,7 @@
 #salonika-site .recipe-source-photos{grid-column:2;grid-row:1;margin:8px 0 24px;display:grid;gap:14px}
 #salonika-site .recipe-with-photo .recipe-columns{grid-column:1;grid-row:1;gap:24px}
 #salonika-site .recipe-photo-window{position:relative;overflow:hidden;aspect-ratio:var(--photo-ratio);background:var(--parch);border-radius:3px}
-#salonika-site .recipe-photo-window img{position:absolute;display:block;width:var(--scan-width);max-width:none;height:auto;left:var(--scan-left);top:var(--scan-top);margin:0;padding:0;border:0;object-fit:initial}
+#salonika-site .recipe-photo-window img{position:absolute;display:block;width:var(--scan-width)!important;max-width:none!important;height:auto!important;left:var(--scan-left);top:var(--scan-top);margin:0;padding:0;border:0;object-fit:initial}
 #salonika-site .recipe-source-photos figcaption{font-size:13px;line-height:1.6;color:var(--muted)}
 #salonika-site .recipe-body>.activity-text-link{margin-top:12px}
 #salonika-site .recipe summary:focus-visible{outline:2px solid var(--teal-2);outline-offset:3px}
