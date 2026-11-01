@@ -37,3 +37,7 @@
 #salonika-site #activity #gateway-gallery .activity-subtopics li{padding-block:3px;font-size:14px;line-height:1.5}
 #salonika-site #activity #gateway-gallery .activity-subtopics a{min-height:28px}
 @media(pointer:coarse){#salonika-site #activity #gateway-gallery .activity-subtopics a{min-height:36px}}
+
+/* Do not let the stretched primary link intercept topic buttons and links. */
+#salonika-site #activity .activity-group .more::before{display:none}
+#salonika-site #gateway-gallery .ph img{object-fit:contain;object-position:center;background:var(--ink)}
