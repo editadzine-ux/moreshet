@@ -33,3 +33,15 @@
  #salonika-site #archive .collection-panel-trigger,
  #salonika-site #archive .collection-panel.is-open .collection-panel-trigger{min-height:144px}
 }
+
+/* Review items 3–5 and a discreet soundtrack attribution. */
+#salonika-site .foot .music-credit{font-size:12px!important;line-height:1.6!important;color:var(--mist);margin-block:32px 0;padding-block:0;max-width:none}
+#salonika-site .foot .music-credit a{display:inline;color:inherit;text-decoration:underline;text-underline-offset:3px;font-size:inherit}
+#salonika-site .foot .music-credit+.copy{margin-top:12px;padding-top:16px}
+#salonika-site .center-official-name{margin:24px 0 12px;color:var(--navy)}
+#salonika-site .center-official-name>strong,#salonika-site .center-official-name>span{display:block}
+#salonika-site .center-official-name .life-dates{display:inline-block;white-space:nowrap}
+#salonika-site #about .about-story-link{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;margin-top:20px;background:var(--teal-2);color:var(--paper);border:1px solid var(--teal-2);border-radius:2px;font-size:18px;font-weight:600;line-height:1.5;text-decoration:none}
+#salonika-site #about .about-story-link:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+@media(hover:hover){#salonika-site #about .about-story-link:hover{background:var(--navy);border-color:var(--navy)}}
+#salonika-site .stats b.stat-pending{font-size:clamp(24px,2.4vw,32px);line-height:1.4;direction:rtl}
