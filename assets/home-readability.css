@@ -45,3 +45,9 @@
 #salonika-site #about .about-story-link:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
 @media(hover:hover){#salonika-site #about .about-story-link:hover{background:var(--navy);border-color:var(--navy)}}
 #salonika-site .stats b.stat-pending{font-size:clamp(24px,2.4vw,32px);line-height:1.4;direction:rtl}
+
+/* Shared title and caption rows align the archive status with the numeric stats. */
+#salonika-site .stats{grid-template-rows:auto auto;row-gap:12px}
+#salonika-site .stats>div{display:grid;grid-template-rows:subgrid;grid-row:span 2;align-self:stretch}
+#salonika-site .stats>div>b{align-self:baseline}
+#salonika-site .stats>div>span{margin-top:0;align-self:start}
