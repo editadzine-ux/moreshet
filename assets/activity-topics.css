@@ -40,4 +40,4 @@
 
 /* Do not let the stretched primary link intercept topic buttons and links. */
 #salonika-site #activity .activity-group .more::before{display:none}
-#salonika-site #gateway-gallery .ph img{object-fit:contain;object-position:center;background:var(--ink)}
+#salonika-site #gateway-gallery .ph img{object-fit:cover;object-position:center;width:100%;height:100%;padding:0}
