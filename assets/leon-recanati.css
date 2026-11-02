@@ -1,7 +1,7 @@
 /* A real archive portrait and live, accessible biography text. */
-#salonika-site.x .about-art.leon-card{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;height:auto;min-height:590px;padding:40px 30px;background:var(--tint);border:1px solid var(--mist);color:var(--ink);text-align:center;text-decoration:none;overflow:hidden}
+#salonika-site.x .about-art.leon-card{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;height:auto;aspect-ratio:auto;min-height:590px;min-width:0;max-width:100%!important;margin:0!important;padding:40px 30px;background:var(--tint);border:1px solid var(--mist);color:var(--ink);text-align:center;text-decoration:none;overflow:hidden}
 #salonika-site .leon-card::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/moreshet/assets/illustrations/header-founder-salonika.webp') center bottom/auto 70% no-repeat;opacity:.13}
-#salonika-site .leon-card>img{display:block;width:240px;max-width:70%;height:auto;object-fit:contain;border:8px solid var(--parch);box-shadow:0 12px 32px color-mix(in srgb,var(--ink) 14%,transparent)}
+#salonika-site .leon-card>img{display:block;flex-shrink:0;width:240px;max-width:100%;height:auto;object-fit:contain;border:8px solid var(--parch);box-shadow:0 12px 32px color-mix(in srgb,var(--ink) 14%,transparent)}
 #salonika-site .leon-card-copy{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:34ch}
 #salonika-site .leon-card-copy strong{font:500 clamp(26px,2.4vw,36px)/1.25 var(--display)}
 #salonika-site .leon-years{font-size:16px;color:var(--muted)}

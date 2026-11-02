@@ -4,6 +4,7 @@
   const music = film?.querySelector('[data-film-music]');
   let soundEnabled = false;
   let musicStarting = false;
+  let musicAttempt = 0;
   const seek = film?.querySelector('#seek');
   const bar = film?.querySelector('.film-bar');
   if (!video || !seek || !bar) return;
@@ -52,6 +53,9 @@
     bar.querySelector('[data-s="sound"]').classList.toggle('off', !soundEnabled);
     play.setAttribute('aria-label', video.paused ? 'ניגון הסרט' : 'השהיית הסרט');
     mute.setAttribute('aria-label', !soundEnabled ? 'הפעלת קול' : 'השתקת קול');
+    mute.setAttribute('aria-pressed', String(soundEnabled));
+    const soundLabel = mute.querySelector('.film-sound-label');
+    if (soundLabel) soundLabel.textContent = mute.getAttribute('aria-label');
     play.title = play.getAttribute('aria-label');
     mute.title = mute.getAttribute('aria-label');
     seek.disabled = back.disabled = forward.disabled = !total;
@@ -68,33 +72,43 @@
       music.currentTime = Math.min(video.currentTime, music.duration || video.currentTime);
     }
   }
-  function playMusic() {
-    if (!music || !soundEnabled || video.paused || video.ended || video.seeking) return;
+  function stopMusic() {
+    musicAttempt++;
+    musicStarting = false;
+    music?.pause();
+  }
+  function playMusic(fromGesture = false) {
+    if (!music || !soundEnabled || (!fromGesture && (video.paused || video.ended || video.seeking))) return;
     alignMusic();
-    if (!music.paused || musicStarting) return;
+    if (!music.paused || (musicStarting && !fromGesture)) return;
     musicStarting = true;
+    const attemptId = ++musicAttempt;
+    // Call play directly during the tap, even if the video is still loading
+    // or seeking. iOS cannot unlock audio from a later "playing" event.
     const attempt = music.play();
     if (attempt?.then) attempt.catch(() => {
-      if (soundEnabled && !video.paused && !video.seeking) {
+      if (attemptId === musicAttempt && soundEnabled && !video.paused && !video.seeking) {
         soundEnabled = false;
+        stopMusic();
         sync();
       }
-    }).finally(() => { musicStarting = false; });
+    }).finally(() => { if (attemptId === musicAttempt) musicStarting = false; });
     else musicStarting = false;
   }
   if (music) {
     video.muted = true;
     video.addEventListener('volumechange', () => { if (!video.muted) video.muted = true; });
-    ['pause', 'waiting', 'seeking', 'emptied', 'ended'].forEach(event => video.addEventListener(event, () => music.pause()));
+    ['pause', 'waiting', 'seeking', 'emptied', 'ended'].forEach(event => video.addEventListener(event, stopMusic));
     ['playing', 'seeked'].forEach(event => video.addEventListener(event, () => { alignMusic(); playMusic(); }));
     video.addEventListener('timeupdate', alignMusic);
     video.addEventListener('ratechange', () => { music.playbackRate = video.playbackRate; });
     music.addEventListener('loadedmetadata', alignMusic);
+    music.addEventListener('error', () => { soundEnabled = false; stopMusic(); sync(); });
   }
-  function start() {
+  function start(fromGesture = false) {
     const attempt = video.play();
-    if (attempt?.catch) attempt.catch(() => { music?.pause(); sync(); });
-    playMusic();
+    if (attempt?.catch) attempt.catch(() => { stopMusic(); sync(); });
+    playMusic(fromGesture);
   }
   function seekTo(target) {
     const total = duration();
@@ -104,11 +118,11 @@
     video.currentTime = point;
     sync();
   }
-  play.addEventListener('click', () => video.paused ? start() : video.pause());
+  play.addEventListener('click', () => video.paused ? start(true) : video.pause());
   mute.addEventListener('click', () => {
     soundEnabled = !soundEnabled;
-    if (soundEnabled) playMusic();
-    else music?.pause();
+    if (soundEnabled) start(true);
+    else stopMusic();
     sync();
   });
   back.addEventListener('click', () => seekTo(video.currentTime - 10));
