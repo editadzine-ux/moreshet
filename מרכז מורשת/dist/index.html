@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/assets/content-world.css?v=20261018-vertical">
 <link rel="stylesheet" href="/assets/events.css?v=20261018-arrows">
 <link rel="stylesheet" href="/assets/film-player.css?v=20261102-mobile-sound">
-<link rel="stylesheet" href="/assets/contact-form.css"><link rel="stylesheet" href="/assets/heritage-illustrations.css">
+<link rel="stylesheet" href="/assets/contact-form.css?v=20261102-routing"><link rel="stylesheet" href="/assets/heritage-illustrations.css">
 <link rel="icon" type="image/png" href="assets/logo-star.png"><link rel="stylesheet" href="/assets/content-studio.css?v=20261026-topic-transparency"><link rel="stylesheet" href="/assets/home-readability.css?v=20261102-mobile-layout"><link rel="stylesheet" href="/assets/leon-recanati.css?v=20261102-full-portrait"><link rel="stylesheet" href="/assets/sharon-review.css?v=20261102-avner-icon">
 </head><body><div dir="rtl" style="width:100%;background:#fff;color:#163945;font-family:var(--font)">
 
@@ -335,18 +335,20 @@
 <p><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg><a href="tel:+97237788939" dir="ltr">03-7788939</a></p>
 <p class="contact-directions"><a href="https://www.google.com/maps/search/?api=1&amp;query=%D7%94%D7%9E%D7%A8%D7%9B%D7%96%20%D7%9C%D7%9E%D7%95%D7%A8%D7%A9%D7%AA%20%D7%99%D7%94%D7%93%D7%95%D7%AA%20%D7%A9%D7%90%D7%9C%D7%95%D7%A0%D7%99%D7%A7%D7%99%20%D7%95%D7%99%D7%95%D7%95%D7%9F%20%D7%90%D7%99%D7%99%D7%A0%D7%A9%D7%98%D7%99%D7%99%D7%9F%2021%20%D7%A4%D7%AA%D7%97%20%D7%AA%D7%A7%D7%95%D7%95%D7%94" target="_blank" rel="noopener noreferrer">Google Maps ↗</a><a href="https://waze.com/ul?q=%D7%94%D7%9E%D7%A8%D7%9B%D7%96%20%D7%9C%D7%9E%D7%95%D7%A8%D7%A9%D7%AA%20%D7%99%D7%94%D7%93%D7%95%D7%AA%20%D7%A9%D7%90%D7%9C%D7%95%D7%A0%D7%99%D7%A7%D7%99%20%D7%95%D7%99%D7%95%D7%95%D7%9F%20%D7%90%D7%99%D7%99%D7%A0%D7%A9%D7%98%D7%99%D7%99%D7%9F%2021%20%D7%A4%D7%AA%D7%97%20%D7%AA%D7%A7%D7%95%D7%95%D7%94&amp;navigate=yes" target="_blank" rel="noopener noreferrer">Waze ↗</a></p></address>
 </div>
-<form class="form" data-contact-preview aria-label="פנייה למרכז המורשת" aria-describedby="home-contact-preview" method="post">
+<form class="form" data-contact-mailto aria-label="פנייה למרכז המורשת" aria-describedby="home-contact-note" action="mailto:sharon@recanati.org.il" method="post" enctype="text/plain">
 <fieldset class="full kinds"><legend>במה נוכל לעזור?</legend>
 <label class="kind"><input type="radio" name="kind" value="visit" checked><span>הזמנת ביקור</span></label>
 <label class="kind"><input type="radio" name="kind" value="research"><span>תחקיר / ספרייה</span></label>
 <label class="kind"><input type="radio" name="kind" value="general"><span>פנייה כללית</span></label>
 </fieldset>
+<p class="contact-recipient full" role="status" aria-live="polite" aria-atomic="true"><span data-recipient-name>הפנייה לשרון</span><a href="mailto:sharon@recanati.org.il" data-recipient-email><bdi dir="ltr">sharon@recanati.org.il</bdi></a></p>
 <label><span class="sr-only">שם מלא</span><input name="name" placeholder="שם מלא" autocomplete="name" required></label>
 <label><span class="sr-only">אימייל</span><input type="email" name="email" placeholder="אימייל" autocomplete="email" required></label>
 <label class="full"><span class="sr-only">נושא</span><input name="subject" placeholder="נושא" required></label>
 <label class="full"><span class="sr-only">הודעה</span><textarea name="message" placeholder="הודעה" rows="4" required></textarea></label>
-<button type="submit" disabled aria-describedby="home-contact-preview">שליחת פנייה</button>
-<p class="contact-preview-note full" id="home-contact-preview" data-contact-status tabindex="-1">הטופס בתצוגה מקדימה; שליחת פניות עדיין אינה פעילה. <a href="http://www.salonikaheritage.com/html5/?_id=11791&amp;did=9267&amp;G=11791" target="_blank" rel="noopener noreferrer">לפנייה דרך האתר הקיים<span class="sr-only"> (נפתח בחלון חדש)</span></a></p>
+<button type="submit" disabled aria-describedby="home-contact-note">פתיחת הפנייה במייל</button>
+<p class="contact-preview-note full" id="home-contact-note" data-contact-status role="status" aria-live="polite">הפנייה תיפתח בתוכנת המייל שלכם עם הפרטים שמילאתם. השליחה מתבצעת משם.</p>
+<noscript><p class="contact-preview-note full">לפנייה ישירה: הזמנת ביקור ופנייה כללית <a href="mailto:sharon@recanati.org.il">שרון</a>; תחקיר וספרייה <a href="mailto:yrecanat@gmail.com">יצחק</a>.</p></noscript>
 </form>
 </div>
 </section>
@@ -387,4 +389,4 @@ function jr(){if(!tk){tk=true;requestAnimationFrame(jxu)}}
 addEventListener('scroll',jr,{passive:true});addEventListener('resize',jr);jxu();
 })();
 </script><script src="/assets/navigation.js?v=20261020-menu-motion" defer></script><script src="/assets/film-player.js?v=20261102-mobile-sound" defer></script>
-<script src="/assets/contact-preview.js" defer></script><script src="/assets/home-collections.js" defer></script><script src="/assets/content-accordion.js?v=20261018-vertical" defer></script><script src="/assets/events.js" defer></script><script src="/assets/activity-topics.js?v=20261026-gallery-topics" defer></script></body></html>
+<script src="/assets/contact-routing.js?v=20261102-routing" defer></script><script src="/assets/home-collections.js" defer></script><script src="/assets/content-accordion.js?v=20261018-vertical" defer></script><script src="/assets/events.js" defer></script><script src="/assets/activity-topics.js?v=20261026-gallery-topics" defer></script></body></html>
