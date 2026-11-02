@@ -33,3 +33,10 @@
   #salonika-site .contact-compact-form :is(input, textarea) { border: 1px solid CanvasText; }
   #salonika-site [data-contact-preview] button:disabled { color: GrayText; border: 1px solid GrayText; }
 }
+/* Homepage recipient routing; existing compact forms retain their preview behavior. */
+#salonika-site #contact .contact-recipient{display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;margin:-10px 0 0;padding:0 0 14px;border-bottom:1px solid var(--line);color:var(--navy);font-size:16px;line-height:1.6}
+#salonika-site #contact .contact-recipient a{color:var(--teal-2);text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center;overflow-wrap:anywhere;max-width:100%}
+#salonika-site #contact .contact-recipient bdi{overflow-wrap:anywhere}
+#salonika-site #contact .contact-recipient a:focus-visible{outline:2px solid var(--copper);outline-offset:4px}
+#salonika-site #contact [data-contact-mailto] button:disabled{background:var(--muted);cursor:not-allowed}
+#salonika-site #contact [data-contact-mailto] button{white-space:normal;line-height:1.5;padding-block:12px}
