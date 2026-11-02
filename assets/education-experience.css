@@ -1,130 +1,151 @@
-/* Education only. Original illustrated header + a coherent, light documentary layout. */
-:root{--heritage-ease:cubic-bezier(.23,1,.32,1);--heritage-chapter-height:0px}
-html:has(.education-page){scroll-padding-top:calc(var(--salonika-nav-height,110px) + var(--heritage-chapter-height) + 20px);scrollbar-color:#739caa #eff5f4}
+/* Education: an open Hebrew exhibition catalogue. Shared brand assets stay intact. */
+:root{--heritage-ease:cubic-bezier(.16,1,.3,1);--heritage-chapter-height:0px}
+html:has(.education-page){scroll-padding-top:calc(var(--salonika-nav-height,110px) + var(--heritage-chapter-height) + 24px);scrollbar-color:#739caa #eff5f4}
 #salonika-site.education-page{--edu-soft:#f1f5f2;--edu-line:#cddeda;--edu-muted:#46616b}
+#salonika-site.education-page ::selection{background:#c9e2dc;color:var(--ink)}
 #salonika-site.education-page :is(a,button,summary,select):focus-visible{outline:3px solid var(--copper);outline-offset:5px}
+#salonika-site.education-page .edu-chapter h2[tabindex="-1"]:focus{outline:none}
 #salonika-site.education-page :is(.btn,button,summary,a){touch-action:manipulation}
 #salonika-site.education-page :is(.btn,.nav-cta,button):active{transform:scale(.98)}
 #salonika-site.education-page .nav .nav-cta{min-height:44px}
-#salonika-site.education-page .about-breadcrumb a{text-underline-offset:.25em}
-#salonika-site.education-page .about-content p{max-width:70ch}
-#salonika-site.education-page .activity-chapter{scroll-margin-top:20px!important}
-/* The familiar illustrated header intentionally inherits the shared brand CSS unchanged. */
-#salonika-site.education-page .chapter-dock{position:sticky;top:var(--salonika-nav-height,110px);z-index:35;width:100%;margin:0;background:#fff;border-bottom:1px solid var(--edu-line);transition:box-shadow 180ms ease}
-#salonika-site.education-page .chapter-dock.is-stuck{box-shadow:0 8px 22px -14px #12354a55}
-#salonika-site.education-page .chapter-dock-rail{display:flex;align-items:stretch;justify-content:space-between;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#96bdbb transparent;padding-block:0}
-#salonika-site.education-page .chapter-dock-rail>a{position:relative;flex:1 0 auto;display:flex;align-items:center;justify-content:center;min-height:64px;padding:12px 16px;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--navy);font-size:17px;line-height:1.45;text-decoration:none;font-weight:500;white-space:nowrap;transition:background-color 180ms ease,color 180ms ease}
-#salonika-site.education-page .chapter-dock-rail>a[aria-current="location"]{color:var(--teal-2);border-bottom-color:var(--teal-2);background:#edf5f1}
+#salonika-site.education-page :is(h1,h2,h3,summary){letter-spacing:0}
+#salonika-site.education-page a{text-underline-offset:.25em}
+#salonika-site.education-page .activity-chapter{scroll-margin-top:24px!important}
+/* The familiar illustrated opening remains the brand's entrance. */
+#salonika-site.education-page .chapter-dock{position:sticky;top:var(--salonika-nav-height,110px);z-index:35;width:100%;margin:0;background:#fff;border-bottom:1px solid var(--edu-line)}
+#salonika-site.education-page .chapter-dock-rail{display:flex;align-items:stretch;justify-content:space-between;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding-block:0}
+#salonika-site.education-page .chapter-dock-rail>a{position:relative;flex:1 0 auto;display:flex;align-items:center;justify-content:center;min-height:62px;padding:12px 10px;border:0;background:transparent;color:var(--navy);font-size:17px;line-height:1.45;text-decoration:none;font-weight:500;white-space:nowrap;transition:color 180ms ease}
+#salonika-site.education-page .chapter-dock-rail>a:after{content:"";position:absolute;bottom:0;right:18%;left:18%;height:3px;background:var(--teal-2);transform:scaleX(0);transform-origin:right;transition:transform 220ms var(--heritage-ease)}
+#salonika-site.education-page .chapter-dock-rail>a[aria-current="location"]{color:var(--teal-2);font-weight:600}
+#salonika-site.education-page .chapter-dock-rail>a[aria-current="location"]:after{transform:scaleX(1)}
 #salonika-site.education-page .chapter-mobile{display:none}
-/* A short introduction connects the illustrated opening to the documentary chapters. */
-#salonika-site.education-page .edu-intro{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(220px,.7fr);align-items:center;gap:48px;padding-block:44px 52px;border-bottom:1px solid var(--edu-line)}
-#salonika-site.education-page .edu-intro>p{margin:0;font-size:clamp(20px,1.8vw,25px);line-height:1.75;color:var(--navy);max-width:55ch}
-#salonika-site.education-page .edu-inquiry{justify-self:end;display:flex;flex-direction:column;gap:7px;padding-block:10px;font-size:15px;color:var(--edu-muted)}
-#salonika-site.education-page .edu-inquiry strong{display:flex;align-items:center;gap:30px;color:var(--teal-2);font-weight:600;font-size:18px}
-#salonika-site.education-page :is(.edu-inquiry,.edu-album,.edu-educators-note,.heritage-related) svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.5;fill:none;flex:none;transition:transform 200ms var(--heritage-ease)}
-/* Consistent chapter geometry: text starts on the right; photographs form a small album. */
-#salonika-site.education-page .activity-reading{max-width:1280px;padding-block:0 24px}
-#salonika-site.education-page .edu-chapter{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:start;gap:clamp(32px,5vw,72px);padding-block:clamp(44px,6vw,84px);border:0;border-bottom:1px solid var(--edu-line);background:transparent;color:var(--ink)}
+#salonika-site.education-page .edu-intro{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(220px,.7fr);align-items:center;gap:64px;padding-block:48px 56px;border-bottom:1px solid var(--edu-line)}
+#salonika-site.education-page .edu-intro>p{margin:0;font-size:clamp(1.25rem,1.8vw,1.5rem)!important;line-height:1.65!important;color:var(--navy);max-width:48ch}
+#salonika-site.education-page .edu-inquiry{justify-self:end;display:flex;flex-direction:column;gap:8px;padding-block:10px;font-size:15px;color:var(--edu-muted)}
+#salonika-site.education-page .edu-inquiry strong{display:flex;align-items:center;gap:32px;color:var(--teal-2);font-weight:600;font-size:18px}
+#salonika-site.education-page :is(.edu-inquiry,.edu-photo,.edu-educators-note,.heritage-related) svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.5;fill:none;flex:none;transition:transform 200ms var(--heritage-ease)}
+/* A broad opening spread, then a changing rhythm of image and text. */
+#salonika-site.education-page .activity-reading{max-width:1280px;padding-block:0}
+#salonika-site.education-page .edu-chapter{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);align-items:center;gap:clamp(40px,6vw,88px);padding-block:clamp(64px,8vw,112px);border:0;border-bottom:1px solid var(--edu-line);background:transparent;color:var(--ink)}
 #salonika-site.education-page .edu-chapter-copy{min-width:0}
-#salonika-site.education-page .edu-chapter h2{font-size:clamp(30px,3.4vw,48px)!important;line-height:1.2!important;margin:0 0 24px!important;max-width:20ch;color:var(--navy)!important;font-weight:300!important}
-#salonika-site.education-page .edu-chapter h2 em{display:block!important;color:var(--teal-2)!important}
-#salonika-site.education-page .edu-chapter p{margin:0;color:var(--edu-muted);font-size:18px;line-height:1.85}
-#salonika-site.education-page .edu-chapter p+p{margin-top:18px}
-#salonika-site.education-page .edu-album{grid-area:auto;grid-template-areas:none;align-items:stretch;z-index:auto;display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);gap:10px;min-width:0;margin:4px 0 0;padding:14px 14px 0;background:var(--edu-soft);border:1px solid #dce7e1;border-radius:3px;align-self:center}
-#salonika-site.education-page .edu-album-main{display:flex;align-items:center;min-width:0;overflow:hidden;background:#e4ede7}
-#salonika-site.education-page .edu-album-main img{width:100%;height:auto;object-fit:contain}
-#salonika-site.education-page .edu-album-strip{display:grid;grid-template-rows:1fr 1fr;gap:10px;min-width:0;align-self:stretch}
-#salonika-site.education-page .edu-album-strip img{display:block;width:100%;height:100%;min-height:0;object-fit:contain;background:#e4ede7}
-#salonika-site.education-page .edu-album figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;grid-column:1/-1;padding:12px 2px 14px;color:var(--edu-muted);font-size:13px;line-height:1.6;min-width:0}
-#salonika-site.education-page .edu-album figcaption>span{max-width:34ch}
-#salonika-site.education-page .edu-album figcaption>a{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;min-height:44px;color:var(--teal-2);font-weight:600;font-size:14px}
-#salonika-site.education-page .edu-album figcaption svg{width:20px;height:20px}
-/* Native disclosures keep the age-specific material useful and keyboard accessible. */
-#salonika-site.education-page .school-paths{margin:28px 0 0;border-top:1px solid var(--edu-line)}
+#salonika-site.education-page .edu-chapter h2{font-family:var(--display);font-size:clamp(2.5rem,4.6vw,4rem)!important;line-height:1.14!important;margin:0 0 28px!important;max-width:22ch;color:var(--navy)!important;font-weight:350!important;text-wrap:balance}
+#salonika-site.education-page .edu-chapter h2 em{display:block!important;color:var(--teal-2)!important;font-weight:600!important}
+#salonika-site.education-page .edu-chapter p{margin:0;max-width:54ch;color:var(--edu-muted);font-size:18px!important;line-height:1.8!important;text-wrap:pretty}
+#salonika-site.education-page .edu-chapter p+p{margin-top:20px}
+#salonika-site.education-page #schools{grid-template-columns:minmax(0,3fr) minmax(0,7fr);align-items:start;column-gap:clamp(40px,5vw,72px);row-gap:44px;padding-top:64px}
+#salonika-site.education-page #schools .edu-chapter-copy{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,88px);align-items:center}
+#salonika-site.education-page #schools h2{font-size:clamp(3rem,6vw,5rem)!important;margin:0!important}
+#salonika-site.education-page #schools .edu-chapter-copy>p{max-width:50ch}
+#salonika-site.education-page #schools .edu-photo{grid-column:2;grid-row:2}
+#salonika-site.education-page #schools .school-paths{grid-column:1;grid-row:2}
+#salonika-site.education-page .edu-chapter--reverse{grid-template-columns:minmax(0,7fr) minmax(0,4fr)}
+#salonika-site.education-page .edu-chapter--reverse .edu-chapter-copy{grid-column:2;grid-row:1}
+#salonika-site.education-page .edu-chapter--reverse .edu-photo{grid-column:1;grid-row:1}
+#salonika-site.education-page .edu-chapter--story{align-items:start;grid-template-columns:minmax(0,3fr) minmax(0,5fr)}
+#salonika-site.education-page .edu-chapter--story .edu-photo{margin-top:56px}
+/* Documentary pictures are complete frames, without mats or ornamental containers. */
+#salonika-site.education-page .edu-photo{grid-area:auto;grid-template-areas:none;align-items:stretch;z-index:auto;display:block;min-width:0;margin:0;padding:0;background:transparent;border:0;border-radius:0}
+#salonika-site.education-page .edu-photo-link{display:block;overflow:hidden;background:transparent}
+#salonika-site.education-page .edu-photo-link img{display:block;width:100%;height:auto;object-fit:contain}
+#salonika-site.education-page .edu-photo figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:8px 20px;padding-block:14px 0;color:var(--edu-muted);font-size:14px;line-height:1.6;min-width:0}
+#salonika-site.education-page .edu-photo figcaption>span{max-width:36ch}
+#salonika-site.education-page .edu-photo figcaption>a{display:inline-flex;align-items:center;gap:12px;flex-shrink:0;min-height:44px;color:var(--teal-2);font-weight:600;font-size:15px}
+#salonika-site.education-page .edu-photo figcaption svg{width:20px;height:20px}
+#salonika-site.education-page .edu-photo-choices{display:flex;gap:12px;margin-top:12px}
+#salonika-site.education-page .edu-photo-choices[hidden]{display:none}
+#salonika-site.education-page .edu-photo-choices button{width:88px;min-height:54px;display:block;border:0;border-bottom:3px solid transparent;background:transparent;padding:0 0 6px;cursor:pointer;opacity:.65;transition:opacity 180ms ease,border-color 180ms ease}
+#salonika-site.education-page .edu-photo-choices button[aria-pressed="true"]{border-bottom-color:var(--teal-2);opacity:1}
+#salonika-site.education-page .edu-photo-choices img{display:block;width:100%;height:auto}
+#salonika-site.education-page .edu-photo-status{display:block;font-size:14px;color:var(--edu-muted);line-height:1.6}
+#salonika-site.education-page .edu-photo-status:empty{display:none}
+/* Native disclosures: open reading paths, separated only by fine rules. */
+#salonika-site.education-page .school-paths{margin:0;border-top:1px solid var(--edu-line)}
 #salonika-site.education-page .school-paths details{border-bottom:1px solid var(--edu-line)}
-#salonika-site.education-page .school-paths summary{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:58px;padding-block:13px;list-style:none;font-size:18px;font-weight:600;color:var(--navy);cursor:pointer}
+#salonika-site.education-page .school-paths summary{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:68px;padding-block:18px;list-style:none;font-size:19px;font-weight:600;color:var(--navy);cursor:pointer}
 #salonika-site.education-page .school-paths summary::-webkit-details-marker{display:none}
+#salonika-site.education-page .school-paths summary:focus-visible{outline:0;text-decoration:underline;text-decoration-color:var(--copper);text-decoration-thickness:3px;text-underline-offset:7px}
 #salonika-site.education-page .school-paths summary svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;flex:none;transition:transform 180ms var(--heritage-ease)}
 #salonika-site.education-page .school-paths details[open] summary{color:var(--teal-2)}
 #salonika-site.education-page .school-paths details[open] svg{transform:rotate(180deg)}
-#salonika-site.education-page .school-paths details p{font-size:16px;line-height:1.8;padding:0 0 18px}
-/* A quieter library interlude belongs to the same palette and editorial grid. */
-#salonika-site.education-page .edu-chapter--educators{align-items:center}
-#salonika-site.education-page .edu-educators-note{display:grid;grid-template-columns:160px minmax(0,1fr);align-items:center;gap:24px;padding:26px;background:var(--edu-soft);border-radius:3px}
-#salonika-site.education-page .edu-educators-note>img{width:160px;height:180px;object-fit:contain}
-#salonika-site.education-page .edu-educators-note h3{font-size:25px!important;line-height:1.3;color:var(--navy);font-weight:550;margin:0 0 12px}
-#salonika-site.education-page .edu-educators-note p{font-size:16px;line-height:1.8}
-#salonika-site.education-page .edu-educators-note a{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;margin-top:14px;color:var(--teal-2);font-size:15px;font-weight:600}
-/* Related material has a visual destination and a clear action. */
-#salonika-site.education-page .heritage-related{padding-block:44px 72px}
-#salonika-site.education-page .heritage-related h2{font-size:clamp(28px,3vw,40px)!important;color:var(--navy);margin:0 0 28px!important}
-#salonika-site.education-page .heritage-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-#salonika-site.education-page .heritage-related-link{display:grid;grid-template-columns:180px minmax(0,1fr);align-items:center;gap:24px;border-block:1px solid var(--edu-line);padding-block:18px;color:var(--navy);min-width:0}
-#salonika-site.education-page .heritage-related-link img{display:block;width:180px;height:112px;object-fit:contain;background:var(--edu-soft)}
-#salonika-site.education-page .heritage-related-link>span{display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--display);font-size:clamp(21px,2vw,27px);line-height:1.4}
-#salonika-site.education-page .edu-contact{padding-block:clamp(38px,5vw,64px);background:#eaf2ee;border-block:1px solid var(--edu-line)}
-#salonika-site.education-page .edu-contact h2{margin:0 0 14px!important;font-size:clamp(29px,3vw,40px)!important}
-#salonika-site.education-page .edu-contact p{font-size:18px;line-height:1.8;color:var(--edu-muted)}
+#salonika-site.education-page .school-paths details p{font-size:17px!important;line-height:1.8!important;padding:0 0 24px}
+/* The existing book illustration gives the long page a quieter interval. */
+#salonika-site.education-page .edu-chapter--educators{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:64px}
+#salonika-site.education-page .edu-educators-note{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:24px;padding:0;background:transparent}
+#salonika-site.education-page .edu-educators-note>img{width:100%;height:auto;object-fit:contain}
+#salonika-site.education-page .edu-educators-note h3{font-size:28px!important;line-height:1.3;color:var(--navy);font-weight:550;margin:0 0 14px}
+#salonika-site.education-page .edu-educators-note p{font-size:17px!important;line-height:1.75!important}
+#salonika-site.education-page .edu-educators-note a{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;margin-top:16px;color:var(--teal-2);font-size:16px;font-weight:600}
+/* Open photographic links extend the visit, without a card grid. */
+#salonika-site.education-page .heritage-related{padding-block:80px 96px}
+#salonika-site.education-page .heritage-related h2{font-size:clamp(2rem,3.6vw,3rem)!important;line-height:1.2!important;color:var(--navy);margin:0 0 40px!important;font-weight:350!important}
+#salonika-site.education-page .heritage-related-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+#salonika-site.education-page .heritage-related-link{display:block;color:var(--navy);min-width:0}
+#salonika-site.education-page .heritage-related-link:nth-child(2){margin-top:56px}
+#salonika-site.education-page .heritage-related-link img{display:block;width:100%;height:auto;object-fit:contain}
+#salonika-site.education-page .heritage-related-link>span{display:flex;align-items:center;gap:8px;font-family:var(--display);font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.4;padding-block:18px}
+#salonika-site.education-page .heritage-related-link svg{margin-inline-start:auto}
+#salonika-site.education-page .edu-contact{padding-block:clamp(48px,6vw,88px);background:#eaf2ee;border:0}
+#salonika-site.education-page .edu-contact h2{margin:0 0 20px!important;font-size:clamp(2rem,3.8vw,3.25rem)!important;line-height:1.2!important}
+#salonika-site.education-page .edu-contact p{font-size:18px!important;line-height:1.8!important;color:var(--edu-muted)}
 #salonika-site.education-page .edu-contact .btn{min-height:56px;gap:7px;flex-shrink:0;background:var(--teal-2);color:#fff;transition:background-color 180ms ease,transform 160ms var(--heritage-ease)}
 #salonika-site.education-page .foot-grid>div{min-width:0}
 #salonika-site.education-page .social{flex-wrap:wrap}
 #salonika-site.education-page .foot a:focus-visible{outline-color:var(--sand)}
-/* One brief photo-entry treatment. Content is visible before enhancement. */
+/* One authored opening: the school photograph quietly opens into its full frame. */
 @media(prefers-reduced-motion:no-preference){
- #salonika-site.education-page [data-sc-in].sc-in{animation:education-album-enter 420ms var(--heritage-ease) both}
- @keyframes education-album-enter{from{opacity:.75;transform:translateY(10px)}to{opacity:1;transform:none}}
+ #salonika-site.education-page .edu-photo--browse.sc-in .edu-photo-link{animation:education-open-frame 650ms var(--heritage-ease) both}
+ @keyframes education-open-frame{from{clip-path:inset(0 8% 0 0);opacity:.8}to{clip-path:inset(0);opacity:1}}
 }
 @media(hover:hover) and (pointer:fine){
- #salonika-site.education-page .chapter-dock-rail>a:hover{background:var(--edu-soft);color:var(--teal-2)}
- #salonika-site.education-page :is(.edu-inquiry,.edu-album figcaption>a,.edu-educators-note a,.heritage-related-link):hover svg{transform:translateX(-4px)}
+ #salonika-site.education-page .chapter-dock-rail>a:hover{color:var(--teal-2)}
+ #salonika-site.education-page :is(.edu-inquiry,.edu-photo figcaption>a,.edu-educators-note a,.heritage-related-link):hover svg{transform:translateX(-4px)}
  #salonika-site.education-page .school-paths summary:hover{color:var(--teal-2)}
+ #salonika-site.education-page .edu-photo-choices button:hover{opacity:1}
  #salonika-site.education-page .edu-contact .btn:hover{background:var(--navy)}
-}
-@media(min-width:1100px){
- #salonika-site.education-page #schools .edu-album{position:sticky;top:calc(var(--salonika-nav-height,110px) + var(--heritage-chapter-height) + 32px);align-self:start;margin-top:8px}
 }
 @media(max-width:1000px){
  #salonika-site.education-page .chapter-dock-rail{gap:4px}
- #salonika-site.education-page .chapter-dock-rail>a{padding-inline:10px;font-size:15px;min-height:56px}
- #salonika-site.education-page .edu-album{grid-template-columns:1fr}
- #salonika-site.education-page .edu-album-strip{grid-template-columns:1fr 1fr;grid-template-rows:none}
- #salonika-site.education-page .edu-album-strip img{height:auto;aspect-ratio:16/9}
- #salonika-site.education-page .edu-album figcaption{flex-wrap:wrap;gap:2px 12px}
- #salonika-site.education-page .edu-educators-note{grid-template-columns:100px minmax(0,1fr);gap:16px;padding:20px}
- #salonika-site.education-page .edu-educators-note>img{width:100px;height:140px}
- #salonika-site.education-page .heritage-related-link{grid-template-columns:110px minmax(0,1fr);gap:16px}
- #salonika-site.education-page .heritage-related-link img{width:110px;height:90px}
+ #salonika-site.education-page .chapter-dock-rail>a{padding-inline:8px;font-size:15px;min-height:56px}
+ #salonika-site.education-page .edu-chapter{gap:36px;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+ #salonika-site.education-page #schools{grid-template-columns:minmax(0,1fr) minmax(0,1.8fr)}
+ #salonika-site.education-page .edu-chapter--reverse{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+ #salonika-site.education-page .edu-photo figcaption{flex-wrap:wrap;gap:0 12px}
+ #salonika-site.education-page .edu-educators-note{grid-template-columns:1fr;gap:16px}
+ #salonika-site.education-page .edu-educators-note>img{width:200px;justify-self:center}
 }
-@media(max-width:700px){
+@media(max-width:760px){
  #salonika-site.education-page .chapter-dock-rail{display:none}
  #salonika-site.education-page .chapter-mobile{display:flex;align-items:center;gap:12px;padding-block:7px}
- #salonika-site.education-page .chapter-mobile>span{font-size:13px;color:var(--edu-muted);white-space:nowrap}
- #salonika-site.education-page .chapter-mobile select{min-width:0;flex:1;max-width:100%;min-height:42px;padding:6px 10px;border:1px solid #b6cdca;border-radius:4px;background:#edf5f1;color:var(--teal-2);font-family:var(--font);font-size:16px;line-height:1.45}
- #salonika-site.education-page .edu-intro{grid-template-columns:1fr;gap:18px;padding-block:30px}
- #salonika-site.education-page .edu-intro>p{font-size:20px;line-height:1.7}
- #salonika-site.education-page .edu-inquiry{justify-self:stretch;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;border-top:1px solid var(--edu-line);padding-top:18px}
+ #salonika-site.education-page .chapter-mobile>span{font-size:14px;color:var(--edu-muted);white-space:nowrap}
+ #salonika-site.education-page .chapter-mobile select{min-width:0;flex:1;max-width:100%;min-height:44px;padding:6px 10px;border:0;border-bottom:1px solid #7da8a3;border-radius:0;background:#fff;color:var(--teal-2);font-family:var(--font);font-size:16px;line-height:1.45}
+ #salonika-site.education-page .edu-intro{grid-template-columns:1fr;gap:24px;padding-block:32px}
+ #salonika-site.education-page .edu-inquiry{justify-self:stretch;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;border-top:1px solid var(--edu-line);padding-top:20px}
  #salonika-site.education-page .edu-inquiry strong{gap:16px;font-size:16px}
  #salonika-site.education-page .edu-inquiry>span{font-size:14px}
- #salonika-site.education-page .edu-chapter{grid-template-columns:1fr;gap:28px;padding-block:38px}
- #salonika-site.education-page .edu-chapter h2{font-size:34px!important;max-width:none;margin-bottom:20px!important}
- #salonika-site.education-page .edu-chapter p{font-size:17px;line-height:1.85}
- #salonika-site.education-page .edu-album{margin:0;padding:10px 10px 0;gap:8px}
- #salonika-site.education-page .edu-album-strip{gap:8px}
- #salonika-site.education-page .edu-album figcaption{padding:6px 2px 10px;flex-wrap:wrap;gap:0 12px}
- #salonika-site.education-page .edu-album figcaption>span{font-size:13px;max-width:none;flex:1 1 180px}
- #salonika-site.education-page .edu-album figcaption>a{font-size:14px}
- #salonika-site.education-page .school-paths{margin-top:22px}
- #salonika-site.education-page .school-paths details p{font-size:16px}
- #salonika-site.education-page .edu-educators-note{grid-template-columns:90px minmax(0,1fr);gap:16px;padding:18px}
- #salonika-site.education-page .edu-educators-note>img{width:90px;height:130px}
- #salonika-site.education-page .edu-educators-note h3{font-size:23px!important}
- #salonika-site.education-page .edu-educators-note p{font-size:15px}
- #salonika-site.education-page .edu-educators-note a{font-size:14px;gap:8px}
- #salonika-site.education-page .heritage-related{padding-block:36px 48px}
- #salonika-site.education-page .heritage-related-grid{grid-template-columns:1fr;gap:0}
- #salonika-site.education-page .heritage-related-link+.heritage-related-link{border-top:0}
- #salonika-site.education-page .heritage-related-link>span{font-size:22px}
- #salonika-site.education-page .edu-contact .wrap{align-items:flex-start;gap:24px}
+ #salonika-site.education-page :is(.edu-chapter,#schools,.edu-chapter--reverse,.edu-chapter--story){display:flex;flex-direction:column;align-items:stretch;gap:28px;padding-block:48px}
+ #salonika-site.education-page #schools .edu-chapter-copy{display:block}
+ #salonika-site.education-page .edu-chapter h2{font-size:clamp(2.375rem,8vw,3rem)!important;max-width:none;margin-bottom:24px!important}
+ #salonika-site.education-page #schools h2{font-size:clamp(2.75rem,10vw,3.75rem)!important;margin-bottom:24px!important}
+ #salonika-site.education-page .edu-chapter p{font-size:18px!important;line-height:1.8!important}
+ #salonika-site.education-page .edu-photo{margin:0!important}
+ #salonika-site.education-page .edu-photo figcaption{padding-block:12px 0;gap:0 12px}
+ #salonika-site.education-page .edu-photo figcaption>span{font-size:13px;max-width:none;flex:1 1 180px}
+ #salonika-site.education-page .edu-photo figcaption>a{font-size:14px}
+ #salonika-site.education-page .edu-photo-choices{margin-top:8px}
+ #salonika-site.education-page .edu-photo-choices button{width:80px}
+ #salonika-site.education-page .school-paths details p{font-size:17px!important}
+ #salonika-site.education-page .school-paths summary{min-height:64px;font-size:18px}
+ #salonika-site.education-page .edu-educators-note{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:20px}
+ #salonika-site.education-page .edu-educators-note>img{width:100%;height:auto}
+ #salonika-site.education-page .edu-educators-note h3{font-size:24px!important}
+ #salonika-site.education-page .edu-educators-note p{font-size:16px!important}
+ #salonika-site.education-page .edu-educators-note a{font-size:15px;gap:8px}
+ #salonika-site.education-page .heritage-related{padding-block:48px 56px}
+ #salonika-site.education-page .heritage-related h2{margin-bottom:28px!important}
+ #salonika-site.education-page .heritage-related-grid{grid-template-columns:1fr;gap:28px}
+ #salonika-site.education-page .heritage-related-link:nth-child(2){margin-top:0}
+ #salonika-site.education-page .heritage-related-link>span{font-size:25px;padding-block:14px}
+ #salonika-site.education-page .edu-contact .wrap{align-items:flex-start;gap:28px}
  #salonika-site.education-page .edu-contact .btn{width:100%;white-space:normal;font-size:17px;padding-inline:16px}
  #salonika-site.education-page .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
 }
@@ -133,5 +154,5 @@ html:has(.education-page){scroll-padding-top:calc(var(--salonika-nav-height,110p
  #salonika-site.education-page *,#salonika-site.education-page *:before,#salonika-site.education-page *:after{animation-duration:0ms!important;transition-duration:0ms!important;scroll-behavior:auto!important}
 }
 html.heritage-keyboard{scroll-behavior:auto!important}
-.heritage-keyboard #salonika-site.education-page *, .heritage-keyboard #salonika-site.education-page *:before,.heritage-keyboard #salonika-site.education-page *:after{animation-duration:0ms!important;transition-duration:0ms!important}
+.heritage-keyboard #salonika-site.education-page *,.heritage-keyboard #salonika-site.education-page *:before,.heritage-keyboard #salonika-site.education-page *:after{animation-duration:0ms!important;transition-duration:0ms!important}
 @media print{#salonika-site.education-page .chapter-dock{position:static}#salonika-site.education-page [data-sc-in]{opacity:1;transform:none;animation:none}}
