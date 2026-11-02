@@ -17,3 +17,7 @@
 #salonika-site #resource-library .gate-art{position:relative;isolation:isolate;overflow:hidden;background:var(--parch)}
 #salonika-site #resource-library .gate-art img{filter:grayscale(1) brightness(1.5) contrast(.8);mix-blend-mode:multiply;opacity:.48}
 #salonika-site #resource-library .gate-art::after{content:"";position:absolute;inset:0;background:var(--copper);opacity:.36;pointer-events:none}
+/* Appendix B: illustrated entry to the Avner Peretz collection description. */
+#salonika-site #resources #resource-stack .gate-art{overflow:hidden;background:#e5efec}
+#salonika-site #resources #resource-stack .gate-art img{width:100%;height:100%;max-height:280px;object-fit:contain;padding:24px 14px 14px;position:relative;z-index:1}
+@media(max-width:600px){#salonika-site #resources #resource-stack .gate-art img{max-height:210px;padding:20px 10px 10px}}
