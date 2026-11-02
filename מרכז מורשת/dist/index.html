@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="/assets/collections.css">
 <link rel="stylesheet" href="/assets/content-world.css?v=20261018-vertical">
 <link rel="stylesheet" href="/assets/events.css?v=20261018-arrows">
-<link rel="stylesheet" href="/assets/film-player.css?v=20261020-subtle">
+<link rel="stylesheet" href="/assets/film-player.css?v=20261102-mobile-sound">
 <link rel="stylesheet" href="/assets/contact-form.css"><link rel="stylesheet" href="/assets/heritage-illustrations.css">
-<link rel="icon" type="image/png" href="assets/logo-star.png"><link rel="stylesheet" href="/assets/content-studio.css?v=20261026-topic-transparency"><link rel="stylesheet" href="/assets/home-readability.css?v=20261101-stats-align"><link rel="stylesheet" href="/assets/leon-recanati.css?v=20261101"><link rel="stylesheet" href="/assets/sharon-review.css?v=20261101-library-lighter">
+<link rel="icon" type="image/png" href="assets/logo-star.png"><link rel="stylesheet" href="/assets/content-studio.css?v=20261026-topic-transparency"><link rel="stylesheet" href="/assets/home-readability.css?v=20261102-mobile-layout"><link rel="stylesheet" href="/assets/leon-recanati.css?v=20261102-full-portrait"><link rel="stylesheet" href="/assets/sharon-review.css?v=20261101-library-lighter">
 </head><body><div dir="rtl" style="width:100%;background:#fff;color:#163945;font-family:var(--font)">
 
 <main id="salonika-site" class="x" dir="rtl" lang="he" style="font-family: var(--font); color: #12354a; background: #ffffff">
@@ -121,7 +121,8 @@
 </button>
 <button type="button" class="film-btn film-skip" data-act="forward" aria-label="דילוג 10 שניות קדימה" title="10 שניות קדימה" aria-controls="vid" disabled><svg viewbox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 7a10 10 0 1 0 3 7M21 3v5h5"></path><text x="14" y="18" text-anchor="middle" fill="currentColor" stroke="none">10</text></svg></button>
 </div>
-<button type="button" class="film-btn" data-act="mute" aria-label="הפעלת קול" aria-controls="vid">
+<button type="button" class="film-btn" data-act="mute" aria-label="הפעלת קול" aria-controls="vid" aria-pressed="false">
+<span class="film-sound-label" aria-hidden="true">הפעלת קול</span>
 <span class="sx" data-s="muted"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M16 9.5l5 5M21 9.5l-5 5"></path></svg></span>
 <span class="sx off" data-s="sound"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4.5 4.5 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"></path></svg></span>
 </button>
@@ -385,5 +386,5 @@ function jxu(){tk=false;var vh=innerHeight;jx.forEach(function(e){var r=e.getBou
 function jr(){if(!tk){tk=true;requestAnimationFrame(jxu)}}
 addEventListener('scroll',jr,{passive:true});addEventListener('resize',jr);jxu();
 })();
-</script><script src="/assets/navigation.js?v=20261020-menu-motion" defer></script><script src="/assets/film-player.js?v=20261101-bouzouki" defer></script>
+</script><script src="/assets/navigation.js?v=20261020-menu-motion" defer></script><script src="/assets/film-player.js?v=20261102-mobile-sound" defer></script>
 <script src="/assets/contact-preview.js" defer></script><script src="/assets/home-collections.js" defer></script><script src="/assets/content-accordion.js?v=20261018-vertical" defer></script><script src="/assets/events.js" defer></script><script src="/assets/activity-topics.js?v=20261026-gallery-topics" defer></script></body></html>

@@ -51,3 +51,12 @@
 #salonika-site .stats>div{display:grid;grid-template-rows:subgrid;grid-row:span 2;align-self:stretch}
 #salonika-site .stats>div>b{align-self:baseline}
 #salonika-site .stats>div>span{margin-top:0;align-self:start}
+
+/* Keep the three statistics within their columns on small phones. */
+@media(max-width:700px){
+ #salonika-site .stats>div{min-width:0;padding-inline-start:10px}
+ #salonika-site .stats>div:first-child{padding-inline-start:0}
+ #salonika-site .stats b{min-width:0;font-size:clamp(25px,7.5vw,34px);white-space:nowrap}
+ #salonika-site .stats b.stat-pending{font-size:clamp(21px,6.2vw,26px)}
+ #salonika-site .stats span{overflow-wrap:break-word}
+}

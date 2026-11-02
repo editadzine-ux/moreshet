@@ -35,15 +35,18 @@
 #salonika-site .film-seek input::-moz-range-thumb { width: 8px; height: 8px; background: #fff; }
 #salonika-site .film-time { display: block; min-width: 0; font-size: 12px; text-align: center; color: #ffffffe0; text-shadow: 0 1px 2px #0008; }
 #salonika-site .film-more { display: none; }
+#salonika-site .film-sound-label { display: none; }
 #salonika-site .film-bar :is(button, input):focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 @media (hover: hover) and (pointer: fine) {
   #salonika-site .film-btn:hover { background: #ffffff18; color: #fff; }
 }
 @media (max-width: 700px) {
-  #salonika-site .film-bar-in { grid-template-columns: 44px minmax(0, 1fr) 44px; width: calc(100% - 16px); gap: 4px; padding-block: 2px; }
+  #salonika-site .film-bar { opacity: 1; pointer-events: auto; background: linear-gradient(transparent, rgb(0 0 0 / 58%)); }
+  #salonika-site .film-bar-in { grid-template-columns: 44px minmax(0, 1fr) auto; width: calc(100% - 16px); gap: 8px; padding-block: 6px; }
   #salonika-site .film-transport { grid-column: 1; grid-row: 1; }
   #salonika-site .film-seek { grid-column: 2; grid-row: 1; }
-  #salonika-site .film-btn[data-act="mute"] { grid-column: 3; grid-row: 1; }
+  #salonika-site .film-btn[data-act="mute"] { grid-column: 3; grid-row: 1; display: inline-flex; justify-content: center; align-items: center; gap: 6px; width: auto; min-width: 44px; padding-inline: 12px; border-radius: 24px; background: rgb(14 42 53 / 80%); direction: rtl; }
+  #salonika-site .film-sound-label { display: inline; font-size: 14px; font-weight: 600; white-space: nowrap; }
   #salonika-site .film-skip, #salonika-site .film-time { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
