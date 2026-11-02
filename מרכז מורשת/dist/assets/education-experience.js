@@ -68,7 +68,42 @@
       if (location.hash) requestAnimationFrame(() => navigate(location.hash, false, false));
     });
   }
-  // The unmodified Scroll Craft runtime drives brief, single-use album entries.
+  // Visitors choose a complete documentary frame. No autoplay or hidden fallback content.
+  const photoFigure = root.querySelector('.edu-photo--browse');
+  if (photoFigure) {
+    const choices = photoFigure.querySelector('.edu-photo-choices');
+    const main = photoFigure.querySelector('.edu-photo-link img');
+    const caption = photoFigure.querySelector('figcaption > span');
+    const status = photoFigure.querySelector('.edu-photo-status');
+    let request = 0;
+    choices.hidden = false;
+    choices.querySelectorAll('button').forEach(button => button.addEventListener('click', async event => {
+      if (button.getAttribute('aria-pressed') === 'true') return;
+      const ticket = ++request;
+      const image = new Image();
+      image.src = button.querySelector('img').src;
+      photoFigure.setAttribute('aria-busy', 'true');
+      status.textContent = 'טוענים את התמונה…';
+      try {
+        await image.decode();
+        if (ticket !== request) return;
+        main.src = image.src;
+        main.alt = button.dataset.photoAlt;
+        main.parentElement.setAttribute('aria-label', `לגלריה: ${main.alt}`);
+        caption.textContent = main.alt;
+        choices.querySelectorAll('button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        status.textContent = '';
+        if (!reduced.matches && event.detail !== 0 && !document.documentElement.classList.contains('heritage-keyboard')) {
+          main.animate([{opacity:.7},{opacity:1}], {duration:220,easing:'cubic-bezier(.16,1,.3,1)'});
+        }
+      } catch {
+        if (ticket === request) status.textContent = 'התמונה לא נטענה. אפשר לנסות שוב או לפתוח את הגלריה המלאה.';
+      } finally {
+        if (ticket === request) photoFigure.removeAttribute('aria-busy');
+      }
+    }));
+  }
+  // The unmodified Scroll Craft runtime opens the school photograph once.
   // Mobile/reduced-motion readers retain a static, complete editorial layout.
   let craft;
   function mountMotion() {
@@ -79,5 +114,5 @@
   }
   mountMotion();
   reduced.addEventListener('change', mountMotion);
-  matchMedia('(min-width: 701px)').addEventListener('change', mountMotion);
+  matchMedia('(min-width: 761px)').addEventListener('change', mountMotion);
 })();
